@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tierra
+  - CinemachineTarget
+  - Agua
+  - Fuego
+  - Viento
   layers:
   - Default
   - TransparentFX
