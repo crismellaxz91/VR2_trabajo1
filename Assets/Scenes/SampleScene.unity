@@ -766,6 +766,90 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2137643466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264641578448583584, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+  m_PrefabInstance: {fileID: 3593591181469216408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137643467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137643466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 2137643470}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_LeftHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 800f1dde-086a-473a-9000-f192e6b10d93
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d15220df-9d32-4561-bd47-527b4ad916d9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+--- !u!114 &2137643468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137643466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 2137643470}
+--- !u!114 &2137643469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7859750008027706884, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+  m_PrefabInstance: {fileID: 3593591181469216408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137643466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2137643470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137643466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 2137643469}
 --- !u!1001 &3593591181469216408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,10 +905,30 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1219525486}
+    - target: {fileID: 3465664363974456874, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3655335932190267588, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1219525486}
+    - target: {fileID: 4453744865207844422, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_Id
+      value: b523e093-ffdd-4c0a-a775-fafa1435b065
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453744865207844422, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_Id
+      value: 770dcb7d-8f30-4268-b267-a4355c5789bc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453744865207844422, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 6dc3ef5f-67a8-4512-b818-bcce83a0abe9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453744865207844422, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 5ae98796-b6c2-4d38-aac8-ca1a9740cb1e
+      objectReference: {fileID: 0}
     - target: {fileID: 5264641578448583584, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Name
       value: XR Origin
