@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 public class EarthBending : MonoBehaviour
 {
     public bool Held;
-    public 
+    public Transform holdPosition;
+    public Rigidbody rb;
+    public float speed;
     void Update()
     {
         

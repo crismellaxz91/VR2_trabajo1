@@ -1236,6 +1236,15 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hold"",
+                    ""type"": ""Button"",
+                    ""id"": ""fb2acf39-1d05-4df2-bfae-e0e694a02da4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1258,6 +1267,28 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Bending"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48b65d19-671d-48ee-b095-702eea5f7e51"",
+                    ""path"": ""<XRController>/{PrimaryAction}"",
+                    ""interactions"": ""Hold(duration=0.4,pressPoint=0.5)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""500b2593-e945-45cf-a2e5-cada94da8ae8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold(duration=0.4,pressPoint=0.5)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1380,6 +1411,7 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
         // Custom
         m_Custom = asset.FindActionMap("Custom", throwIfNotFound: true);
         m_Custom_Bending = m_Custom.FindAction("Bending", throwIfNotFound: true);
+        m_Custom_Hold = m_Custom.FindAction("Hold", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1919,11 +1951,13 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
     private readonly InputActionMap m_Custom;
     private ICustomActions m_CustomActionsCallbackInterface;
     private readonly InputAction m_Custom_Bending;
+    private readonly InputAction m_Custom_Hold;
     public struct CustomActions
     {
         private @XRIDefaultInputActions m_Wrapper;
         public CustomActions(@XRIDefaultInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Bending => m_Wrapper.m_Custom_Bending;
+        public InputAction @Hold => m_Wrapper.m_Custom_Hold;
         public InputActionMap Get() { return m_Wrapper.m_Custom; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1936,6 +1970,9 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                 @Bending.started -= m_Wrapper.m_CustomActionsCallbackInterface.OnBending;
                 @Bending.performed -= m_Wrapper.m_CustomActionsCallbackInterface.OnBending;
                 @Bending.canceled -= m_Wrapper.m_CustomActionsCallbackInterface.OnBending;
+                @Hold.started -= m_Wrapper.m_CustomActionsCallbackInterface.OnHold;
+                @Hold.performed -= m_Wrapper.m_CustomActionsCallbackInterface.OnHold;
+                @Hold.canceled -= m_Wrapper.m_CustomActionsCallbackInterface.OnHold;
             }
             m_Wrapper.m_CustomActionsCallbackInterface = instance;
             if (instance != null)
@@ -1943,6 +1980,9 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
                 @Bending.started += instance.OnBending;
                 @Bending.performed += instance.OnBending;
                 @Bending.canceled += instance.OnBending;
+                @Hold.started += instance.OnHold;
+                @Hold.performed += instance.OnHold;
+                @Hold.canceled += instance.OnHold;
             }
         }
     }
@@ -2036,5 +2076,6 @@ public partial class @XRIDefaultInputActions : IInputActionCollection2, IDisposa
     public interface ICustomActions
     {
         void OnBending(InputAction.CallbackContext context);
+        void OnHold(InputAction.CallbackContext context);
     }
 }
