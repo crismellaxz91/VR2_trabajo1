@@ -10,6 +10,7 @@ TagManager:
   - Fuego
   - Viento
   - Enemy
+  - Position
   layers:
   - Default
   - TransparentFX
