@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class raycastToSpawn : MonoBehaviour
 {
     public float distance;
@@ -12,6 +13,7 @@ public class raycastToSpawn : MonoBehaviour
    /* public GameObject viento;*/
     public @XRIDefaultInputActions inputActions;
     private RaycastHit hit;
+    /*public Transform holdPos;*/
     void Awake()
     {
         inputActions = new @XRIDefaultInputActions();
@@ -39,7 +41,6 @@ public class raycastToSpawn : MonoBehaviour
             {
                 Instantiate(agua, hit.point, Quaternion.identity);
             }
-
         }
         else
         {

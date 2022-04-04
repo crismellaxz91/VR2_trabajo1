@@ -5,38 +5,33 @@ using UnityEngine.InputSystem;
 
 public class EarthBending : MonoBehaviour
 {
-    public bool Held;
     public Transform holdPosition;
     public Rigidbody rb;
-    public float speed;
+    public float throwSpeed;
     public @XRIDefaultInputActions inputActions;
-    public bool fireIsPressed;
 
-    public void OnEnable()
-    {
-        inputActions.Custom.Hold.performed += Holding;
-    }
-    public void OnDisable()
-    {
-        inputActions.Custom.Hold.performed -= Holding;
-    }
     public void Start()
     {
         holdPosition = GameObject.FindGameObjectWithTag("Position").GetComponent<Transform>();
     }
     public void Holding(InputAction.CallbackContext context)
     {
-        if(context.performed)
+       switch(context.phase)
         {
-            gameObject.transform.position = holdPosition.position;
-        }
-        else
-        {
-            Debug.Log("soltado");
+            case InputActionPhase.Performed:
+                Debug.Log("Performed");
+                break;
+            case InputActionPhase.Started:
+                Debug.Log("Started");
+                break;
+            case InputActionPhase.Canceled:
+                Debug.Log("Started");
+                break;
         }
     }
     void Update()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        gameObject.transform.position = holdPosition.position;
     }
 }
