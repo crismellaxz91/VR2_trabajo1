@@ -603,11 +603,31 @@ MonoBehaviour:
   distance: 30
   roca: {fileID: 4302075314733304928, guid: c4de7ed29b002a042bc3a52af8c86f72, type: 3}
   agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
+  instantiated: 0
 --- !u!4 &832619300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403466167902459107, guid: a834519a09246fc4288d98eaff269f65, type: 3}
   m_PrefabInstance: {fileID: 403466167734584454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &832619301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832619298}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdf9c2ac02225846a170db93a0ba9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  roca: {fileID: 0}
+  agua: {fileID: 0}
+  instantiated: 0
+  isPressed: 0
+  xrNode_L: 4
+  xrNode_R: 5
 --- !u!1001 &1041380786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -721,7 +741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492299594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14c0990b59db73342bd15d8072ec060e, type: 3}
   m_Name: 
@@ -729,6 +749,26 @@ MonoBehaviour:
   distance: 30
   roca: {fileID: 4302075314733304928, guid: c4de7ed29b002a042bc3a52af8c86f72, type: 3}
   agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
+  instantiated: 0
+--- !u!114 &1492299601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492299594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdf9c2ac02225846a170db93a0ba9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 30
+  roca: {fileID: 4302075314733304928, guid: c4de7ed29b002a042bc3a52af8c86f72, type: 3}
+  agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
+  instantiated: 0
+  isPressed: 0
+  xrNode_L: 4
+  xrNode_R: 5
 --- !u!1 &1533760442
 GameObject:
   m_ObjectHideFlags: 0

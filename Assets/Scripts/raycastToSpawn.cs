@@ -1,56 +1,97 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*using UnityEngine.XR;*/
 using UnityEngine.InputSystem;
+using System.Linq;
 
 
 public class raycastToSpawn : MonoBehaviour
 {
+    /*[SerializeField]
+    private XRNode xrNode_L = XRNode.LeftHand;
+    [SerializeField]
+    private XRNode xrNode_R = XRNode.RightHand;
+     private InputDevice device_L;
+     private InputDevice device_R;*/
+    #region variables
     public float distance;
-    public GameObject roca;
-    public GameObject agua;
-    /*public GameObject fuego;*/
-   /* public GameObject viento;*/
+    public GameObject roca, agua/*,fuego, viento*/;
     public @XRIDefaultInputActions inputActions;
     private RaycastHit hit;
+    public bool instantiated;
     /*public Transform holdPos;*/
+    #endregion
     void Awake()
     {
-        inputActions = new @XRIDefaultInputActions();
+       inputActions = new @XRIDefaultInputActions();
     }
+   /*void GetDevice()
+    {
+      device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
+        device_R = InputDevices.GetDeviceAtXRNode(xrNode_R);
+        //InputDevices.GetDevicesAtXRNode(xrNode, devices);
+        //device = devices.FirstOrDefault();
+    }*/
     private void OnEnable()
     {
-      /*  inputActions.Custom.Bending.performed += Bending;
-        inputActions.Custom.Enable();*/
+       /* if (!device_L.isValid)
+        {
+            GetDevice();
+        }
+
+        if (!device_R.isValid)
+        {
+            GetDevice();
+        }*/
+        #region inputBending
         inputActions.XRILeftHandInteraction.Fire.performed += Bending;
         inputActions.XRILeftHandInteraction.Fire.Enable();
         inputActions.XRIRightHandInteraction.Fire.performed += Bending;
         inputActions.XRIRightHandInteraction.Fire.Enable();
+        #endregion
     }
-    private void OnDisable()
+   /* void Update()
     {
-       /* inputActions.Custom.Bending.performed -= Bending;*/
-        inputActions.XRILeftHandInteraction.Fire.performed -= Bending;
-        inputActions.XRIRightHandInteraction.Fire.performed -= Bending;
-    }
-    public void Bending(InputAction.CallbackContext context)
-    {
-        var fwd = transform.TransformDirection(Vector3.forward);
-        if (Physics.Raycast(transform.position, fwd, out hit, distance))
+
+        OnEnable();
+
+        bool triggerValue;
+        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
-            if (hit.collider.CompareTag("Tierra"))
-            {
-                Instantiate(roca, hit.point, Quaternion.identity);
-                
-            }
-            else if(hit.collider.CompareTag("Agua"))
-            {
-                Instantiate(agua, hit.point, Quaternion.identity);
-            }
+            Debug.Log("Trigger button is pressed.");
         }
-        else
+
+        bool triggerValue_R;
+        if (device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue_R) && triggerValue_R)
         {
-            Debug.Log("Nothing hit");
+            Debug.Log("Right Trigger button is pressed.");
         }
-    }
+
+    }*/
+     private void OnDisable()
+     {
+
+         inputActions.XRILeftHandInteraction.Fire.performed -= Bending;
+         inputActions.XRIRightHandInteraction.Fire.performed -= Bending;
+     }
+      public void Bending(InputAction.CallbackContext context)
+      {
+          var fwd = transform.TransformDirection(Vector3.forward);
+          if (Physics.Raycast(transform.position, fwd, out hit, distance))
+          {
+              if (hit.collider.CompareTag("Tierra"))
+              {
+                  Instantiate(roca, hit.point, Quaternion.identity);
+              }
+              else if(hit.collider.CompareTag("Agua"))
+              {
+                  Instantiate(agua, hit.point, Quaternion.identity);
+              }
+          }
+          else
+          {
+              Debug.Log("Nothing hit");
+          }
+      }
 }
