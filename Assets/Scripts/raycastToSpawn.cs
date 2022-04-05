@@ -20,13 +20,18 @@ public class raycastToSpawn : MonoBehaviour
     }
     private void OnEnable()
     {
-        inputActions.Custom.Bending.performed += Bending;
-        inputActions.Custom.Enable();
+      /*  inputActions.Custom.Bending.performed += Bending;
+        inputActions.Custom.Enable();*/
+        inputActions.XRILeftHandInteraction.Fire.performed += Bending;
+        inputActions.XRILeftHandInteraction.Fire.Enable();
+        inputActions.XRIRightHandInteraction.Fire.performed += Bending;
+        inputActions.XRIRightHandInteraction.Fire.Enable();
     }
     private void OnDisable()
     {
-        inputActions.Custom.Bending.performed -= Bending;
-        
+       /* inputActions.Custom.Bending.performed -= Bending;*/
+        inputActions.XRILeftHandInteraction.Fire.performed -= Bending;
+        inputActions.XRIRightHandInteraction.Fire.performed -= Bending;
     }
     public void Bending(InputAction.CallbackContext context)
     {
@@ -36,6 +41,7 @@ public class raycastToSpawn : MonoBehaviour
             if (hit.collider.CompareTag("Tierra"))
             {
                 Instantiate(roca, hit.point, Quaternion.identity);
+                
             }
             else if(hit.collider.CompareTag("Agua"))
             {
