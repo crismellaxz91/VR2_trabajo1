@@ -19,6 +19,8 @@ public class raycastToSpawn : MonoBehaviour
     public GameObject roca, agua/*,fuego, viento*/;
     public @XRIDefaultInputActions inputActions;
     private RaycastHit hit;
+    [SerializeField]
+    private float instantiateHeight;
     public bool instantiated;
     /*public Transform holdPos;*/
     #endregion
@@ -82,16 +84,17 @@ public class raycastToSpawn : MonoBehaviour
           {
               if (hit.collider.CompareTag("Tierra"))
               {
-                  Instantiate(roca, hit.point, Quaternion.identity);
+                  Instantiate(roca, hit.point + Vector3.up * instantiateHeight, Quaternion.identity);
               }
               else if(hit.collider.CompareTag("Agua"))
               {
-                  Instantiate(agua, hit.point, Quaternion.identity);
+                  Instantiate(agua, hit.point + Vector3.up * instantiateHeight, Quaternion.identity);
               }
+
           }
-          else
+         /* else
           {
               Debug.Log("Nothing hit");
-          }
+          }*/
       }
 }
