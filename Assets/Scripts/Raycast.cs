@@ -5,16 +5,29 @@ using UnityEngine.XR;
 
 public class Raycast : MonoBehaviour
 {
-#region variables 
+    #region variables 
+    [SerializeField]
+    private LayerMask dragMask;
+
     public float distance;
+
     public GameObject roca, agua/*,fuego, viento*/;
+
+    public GameObject selectedObject;
+
     [SerializeField]
     private int maxProjectiles;
+
     private RaycastHit hit;
-   /* private Ray ray;*/
+
+    private Ray ray;
+
     public Vector3 endPoint;
+
     public bool instantiated;
-    public float followSpeed;
+
+    public bool isDragging;
+
     public float instantiateHeight;
     #endregion
     #region nodesAndInput
@@ -31,13 +44,6 @@ public class Raycast : MonoBehaviour
 
     public bool rightHandDebugPC;
     public bool lefttHandDebugPC;
-
-    public void Start()
-    {
-        /*ray = new Ray(transform.position, transform.forward);*/
-        
-    }
-
     void GetDevice()
     {
         device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
@@ -64,7 +70,6 @@ public class Raycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*Vector3 end = gameObject.transform.position + ray.direction * distance;*/
         OnEnable();
         bool triggerValue;
         if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || lefttHandDebugPC)
@@ -82,7 +87,38 @@ public class Raycast : MonoBehaviour
 
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        if (Physics.Raycast(OriginPoint.position, fwd, out hit, distance))
+        ray = new Ray(OriginPoint.transform.position, fwd);
+
+        if(rightHandDebugPC || lefttHandDebugPC)
+        {
+            if (Physics.Raycast(ray, out hit, distance, dragMask))
+            {
+                if (hit.collider != null)
+                {
+                    selectedObject = hit.collider.gameObject;
+                    isDragging = true;
+                }
+            }
+        }
+        if(isDragging)
+        {
+            Vector3 pos = OriginPoint.position + ray.direction * distance;
+            selectedObject.transform.position = pos;
+        }
+        if(!rightHandDebugPC || !lefttHandDebugPC)
+        {
+            isDragging = false;
+        }
+        /*if(Physics.Raycast(ray, out hit, distance, dragMask))
+        {
+            if(hit.collider != null)
+            {
+               
+            }
+        }*/
+        
+      /*
+       if (Physics.Raycast(OriginPoint.position, fwd, out hit, distance))
         {
             endPoint = hit.point;
 
@@ -90,14 +126,16 @@ public class Raycast : MonoBehaviour
             {
                 if(maxProjectiles < 2)
                 {
-                    Instantiate(roca, hit.point, Quaternion.identity);
+                    GameObject rock = Instantiate(roca, hit.point, Quaternion.identity);
+                    if(rightHandDebugPC)
+                    {
+                                     
+                    }    
                     maxProjectiles++;
 
                 }
-               /* Instantiate(roca, hit.point, Quaternion.identity);*/
-                /*Debug.Log(hit.transform.position);*/
-
-
+               // Instantiate(roca, hit.point, Quaternion.identity);
+                //Debug.Log(hit.transform.position);
             }
             else if (hit.collider.CompareTag("Agua") && triggerValue_R || hit.collider.CompareTag("Agua") && triggerValue || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
             {
@@ -106,20 +144,16 @@ public class Raycast : MonoBehaviour
                     Instantiate(agua, hit.point, Quaternion.identity);
                     maxProjectiles++;
                 }
-              /*Instantiate(agua, hit.point, Quaternion.identity);*/
+              //Instantiate(agua, hit.point, Quaternion.identity);
                 Debug.Log(hit.transform.position);
-
             }
         }
         else
         {
             Debug.Log("Nothing hit");
-            /* Debug.Log(hit.transform.position);*/
+            //Debug.Log(hit.transform.position);
             endPoint = OriginPoint.position + (fwd.normalized * distance);
-        }
-
-
-        
+        }*/
         #endregion
     }
 }
