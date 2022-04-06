@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Proyectil de agua
       objectReference: {fileID: 0}
+    - target: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8167470721227383100, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
       propertyPath: m_UseGravity
       value: 1
