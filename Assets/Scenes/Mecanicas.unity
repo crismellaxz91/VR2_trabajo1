@@ -1320,6 +1320,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 832619299, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492299596, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 403466167902459106, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1524,7 +1532,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 832619301, guid: a834519a09246fc4288d98eaff269f65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a834519a09246fc4288d98eaff269f65, type: 3}
 --- !u!114 &403466167734584456 stripped
 MonoBehaviour:

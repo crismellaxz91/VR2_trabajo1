@@ -8,8 +8,8 @@ public class Raycast : MonoBehaviour
     public float distance;
     public GameObject roca, agua/*,fuego, viento*/;
     private RaycastHit hit;
+    private Raycast ray;
     public bool instantiated;
-    public bool isPressed;
 
     [SerializeField]
     private XRNode xrNode_L = XRNode.LeftHand;
@@ -18,6 +18,12 @@ public class Raycast : MonoBehaviour
     //public List<InputDevice> devices = new List<InputDevice>();
     private InputDevice device_L;
     private InputDevice device_R;
+
+    //Nuevas variables
+    public Transform OriginPoint;
+
+    public bool rightHandDebugPC;
+    public bool lefttHandDebugPC;
 
 
     void GetDevice()
@@ -50,33 +56,49 @@ public class Raycast : MonoBehaviour
         OnEnable();
 
         bool triggerValue;
-        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
+        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || lefttHandDebugPC)
         {
             Debug.Log("Trigger button is pressed.");
         }
 
         bool triggerValue_R;
-        if (device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue_R) && triggerValue_R)
+        if (device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue_R) && triggerValue_R || rightHandDebugPC)
         {
             Debug.Log("Right Trigger button is pressed.");
         }
-        var fwd = transform.TransformDirection(Vector3.forward);
-        if (Physics.Raycast(transform.position, fwd, out hit, distance))
+
+        #region Funcionalidad De instancia de Objetos
+
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+
+        
+
+        if (Physics.Raycast(OriginPoint.position, fwd, out hit, distance))
         {
-            if (hit.collider.CompareTag("Tierra") && triggerValue_R || hit.collider.CompareTag("Tierra") && triggerValue)
+            if (hit.collider.CompareTag("Tierra") && triggerValue_R || hit.collider.CompareTag("Tierra") && triggerValue || hit.collider.CompareTag("Tierra") && rightHandDebugPC)
             {
                 Instantiate(roca, hit.point, Quaternion.identity);
 
-            }
-            else if (hit.collider.CompareTag("Agua") && triggerValue_R || hit.collider.CompareTag("Agua") && triggerValue)
-            {
-                Instantiate(agua, hit.point, Quaternion.identity);
+                Debug.Log(hit.transform.position);
 
             }
+            else if (hit.collider.CompareTag("Agua") && triggerValue_R || hit.collider.CompareTag("Agua") && triggerValue || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
+            {
+                Instantiate(agua, hit.point, Quaternion.identity);
+                Debug.Log(hit.transform.position);
+
+            }
+
+
         }
         else
         {
             Debug.Log("Nothing hit");
+            Debug.Log(hit.transform.position);
         }
+
+
+        
+        #endregion
     }
 }
