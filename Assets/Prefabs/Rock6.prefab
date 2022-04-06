@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1288633028}
   - component: {fileID: 1288633027}
   - component: {fileID: 1958479949}
-  - component: {fileID: 1958479950}
   m_Layer: 0
   m_Name: Rock6
   m_TagString: Untagged
@@ -114,21 +113,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &1958479950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288633026}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8733daae2fcb99e44ab67eac81a9dace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConstAdditionalData: []
-  ManipType: 4
-  isInitialized: 0
-  AdditionalData: {x: 1, y: 0, z: -1, w: 0}
-  chosenSDFType: 1
-  InvertSDF: 1
