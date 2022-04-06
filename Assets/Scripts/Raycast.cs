@@ -14,7 +14,7 @@ public class Raycast : MonoBehaviour
     [SerializeField]
     private XRNode xrNode_L = XRNode.LeftHand;
     [SerializeField]
-    private XRNode xrNode_R = XRNode.RightHand;
+    private XRNode xrNode_R = XRNode.RightHand; 
     //public List<InputDevice> devices = new List<InputDevice>();
     private InputDevice device_L;
     private InputDevice device_R;
