@@ -8,7 +8,7 @@ public class HandPresence : MonoBehaviour
     public InputDeviceCharacteristics controllerCharacteristics;    
     private InputDevice targetDevice;
     public Animator handAnimator;
-
+    public bool handDebug;
     void Start()
     {
         TryInitialize();
