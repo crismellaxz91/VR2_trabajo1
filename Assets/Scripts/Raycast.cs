@@ -13,16 +13,14 @@ public class Raycast : MonoBehaviour
 
     public GameObject roca, agua/*,fuego, viento*/;
 
-    public GameObject selectedObject;
+    public GameObject selectedObjectR;
 
     [SerializeField]
-    private int maxProjectiles;
+    private int maxProjectiles = 2;
 
     private RaycastHit hit;
 
     private Ray ray;
-
-    public Vector3 endPoint;
 
     public bool instantiated;
 
@@ -88,14 +86,13 @@ public class Raycast : MonoBehaviour
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         ray = new Ray(OriginPoint.transform.position, fwd);
-
-        if(rightHandDebugPC || lefttHandDebugPC)
+        if (rightHandDebugPC)
         {
             if (Physics.Raycast(ray, out hit, distance, dragMask))
             {
                 if (hit.collider != null)
                 {
-                    selectedObject = hit.collider.gameObject;
+                    selectedObjectR = hit.collider.gameObject;
                     isDragging = true;
                 }
             }
@@ -103,7 +100,7 @@ public class Raycast : MonoBehaviour
         if(isDragging)
         {
             Vector3 pos = OriginPoint.position + ray.direction * distance;
-            selectedObject.transform.position = pos;
+            selectedObjectR.transform.position = pos;
         }
         if(!rightHandDebugPC || !lefttHandDebugPC)
         {
