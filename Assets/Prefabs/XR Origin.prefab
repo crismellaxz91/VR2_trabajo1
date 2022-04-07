@@ -1,5 +1,188 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1997251134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997251138}
+  - component: {fileID: 1997251137}
+  - component: {fileID: 1997251136}
+  - component: {fileID: 1997251135}
+  - component: {fileID: 1997251139}
+  - component: {fileID: 1997251140}
+  m_Layer: 0
+  m_Name: Locomotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997251138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.814629, y: -29.720207, z: 37.628067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4560103923237579025}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997251137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 6437076020500290586}
+--- !u!114 &1997251136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_LeftHandSnapTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 800f1dde-086a-473a-9000-f192e6b10d93
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d15220df-9d32-4561-bd47-527b4ad916d9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1997251135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1997251137}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ff75c6c1-f585-4071-b30e-0d9338c4fbf9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 99298ceb-c009-4d66-8e0a-d63842e2b5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1997251139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1997251137}
+--- !u!114 &1997251140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997251134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_MoveSpeed: 5
+  m_EnableStrafe: 1
+  m_UseGravity: 1
+  m_GravityApplicationMode: 0
+  m_ForwardSource: {fileID: 7314589824278163948}
+  m_LeftHandMoveAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Move
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: becaab22-48f1-4e3b-b886-081c2e22bbc3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandMoveAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Move
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 17f4313b-c18f-4911-b13f-31e06b593d31
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &314940901324151860
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,8 +353,7 @@ GameObject:
   - component: {fileID: 403466167902459118}
   - component: {fileID: 403466167902459105}
   - component: {fileID: 403466167902459104}
-  - component: {fileID: 832619299}
-  - component: {fileID: 403466167734584458}
+  - component: {fileID: 695814389}
   m_Layer: 0
   m_Name: Right Hand Interactor
   m_TagString: Untagged
@@ -308,7 +490,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403466167902459106}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -667,24 +849,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &832619299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403466167902459106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c0990b59db73342bd15d8072ec060e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 30
-  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
-  agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
-  instantiateHeight: 1
-  instantiated: 0
---- !u!114 &403466167734584458
+--- !u!114 &695814389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -693,25 +858,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 403466167902459106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a11f897a4dafa44baaa96d2a5dbabd, type: 3}
+  m_Script: {fileID: 11500000, guid: 641cf6dedf4ce98419887123dedf6342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dragMask:
     serializedVersion: 2
     m_Bits: 512
-  distance: 6
+  player: {fileID: 4560103923237579025}
+  distance: 4
+  launchVelocity: 30
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
   selectedObjectR: {fileID: 0}
-  maxProjectiles: 2
-  instantiated: 0
+  maxProjectiles: 0
   isDragging: 0
-  instantiateHeight: 0
-  xrNode_L: 4
+  instantiateHeight: 0.1
   xrNode_R: 5
   OriginPoint: {fileID: 403466167902459107}
-  rightHandDebugPC: 1
-  lefttHandDebugPC: 0
+  RightHandDebugPC: 1
 --- !u!1 &403466169539470451
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +889,7 @@ GameObject:
   - component: {fileID: 403466169539470463}
   - component: {fileID: 403466169539470462}
   - component: {fileID: 403466169539470449}
-  - component: {fileID: 1492299596}
+  - component: {fileID: 851619942}
   m_Layer: 0
   m_Name: Left Hand Interactor
   m_TagString: Untagged
@@ -862,7 +1026,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403466169539470451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1221,23 +1385,33 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &1492299596
+--- !u!114 &851619942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403466169539470451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c0990b59db73342bd15d8072ec060e, type: 3}
+  m_Script: {fileID: 11500000, guid: 134ea0f336cbd9f4aabdc8f8ed85b279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 30
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 512
+  player: {fileID: 4560103923237579025}
+  distance: 4
+  launchVelocity: 30
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
-  instantiateHeight: 1
-  instantiated: 0
+  selectedObjectL: {fileID: 0}
+  maxProjectiles: 0
+  isDragging: 0
+  instantiateHeight: 0.1
+  xrNode_L: 4
+  OriginPoint: {fileID: 403466169539470448}
+  lefttHandDebugPC: 1
 --- !u!1 &866065298029023740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1476,7 @@ Transform:
   - {fileID: 7095191311200551432}
   - {fileID: 403466169539470448}
   - {fileID: 403466167902459107}
+  - {fileID: 1997251138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

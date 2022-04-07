@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 128935684}
   - component: {fileID: 1212240076}
   - component: {fileID: 8058266610596504911}
-  - component: {fileID: 5689132227740216475}
   m_Layer: 9
   m_Name: Proyectil roca
   m_TagString: Untagged
@@ -107,7 +106,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128935683}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -231,15 +230,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &5689132227740216475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128935683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4400889a4e487bf4a827093f359212b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

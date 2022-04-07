@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-public class RaycastLeftHand : MonoBehaviour
+
+public class RaycastRightHand : MonoBehaviour
 {
     #region variables 
     [SerializeField]
@@ -15,7 +16,7 @@ public class RaycastLeftHand : MonoBehaviour
     public float launchVelocity;
 
     public GameObject roca, agua/*,fuego, viento*/;
-    public GameObject selectedObjectL;
+    public GameObject selectedObjectR;
     [SerializeField]
     private int maxProjectiles = 0;
 
@@ -29,21 +30,21 @@ public class RaycastLeftHand : MonoBehaviour
     #endregion
     #region nodesAndInput
     [SerializeField]
-    private XRNode xrNode_L = XRNode.LeftHand;
+    private XRNode xrNode_R = XRNode.RightHand;
     //public List<InputDevice> devices = new List<InputDevice>();
-    private InputDevice device_L;
+    private InputDevice device_R;
     #endregion
     //Nuevas variables
     public Transform OriginPoint;
 
-    public bool lefttHandDebugPC;
+    public bool RightHandDebugPC;
     void GetDevice()
     {
-        device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
+        device_R = InputDevices.GetDeviceAtXRNode(xrNode_R);
     }
     private void OnEnable()
     {
-        if (!device_L.isValid)
+        if (!device_R.isValid)
         {
             GetDevice();
         }
@@ -52,28 +53,28 @@ public class RaycastLeftHand : MonoBehaviour
     {
         OnEnable();
         bool triggerValue;
-        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || lefttHandDebugPC)
+        if (device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || RightHandDebugPC)
         {
-           /* Debug.Log("Trigger button is pressed.");*/
+            /* Debug.Log("Trigger button is pressed.");*/
         }
         #region Funcionalidad De instancia de Objetos
 
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         ray = new Ray(OriginPoint.transform.position, fwd);
-        if (lefttHandDebugPC || triggerValue)
+        if (RightHandDebugPC || triggerValue)
         {
-            if(Physics.Raycast(ray, out hit,distance ))
+            if (Physics.Raycast(ray, out hit, distance))
             {
-                if (hit.collider.CompareTag("Tierra") && triggerValue || hit.collider.CompareTag("Tierra") && lefttHandDebugPC)
+                if (hit.collider.CompareTag("Tierra") && triggerValue || hit.collider.CompareTag("Tierra") && RightHandDebugPC)
                 {
-                    if(maxProjectiles < 1)
+                    if (maxProjectiles < 1)
                     {
                         Instantiate(roca, hit.point, Quaternion.identity);
                         maxProjectiles++;
                     }
                 }
-                else if(hit.collider.CompareTag("Agua") && triggerValue || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
+                else if (hit.collider.CompareTag("Agua") && triggerValue || hit.collider.CompareTag("Agua") && RightHandDebugPC)
                 {
                     if (maxProjectiles < 1)
                     {
@@ -86,7 +87,7 @@ public class RaycastLeftHand : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-                    selectedObjectL = hit.collider.gameObject;
+                    selectedObjectR = hit.collider.gameObject;
                     isDragging = true;
                 }
             }
@@ -94,14 +95,14 @@ public class RaycastLeftHand : MonoBehaviour
         if (isDragging)
         {
             Vector3 pos = OriginPoint.position + ray.direction * distance;
-            selectedObjectL.transform.position = pos;
+            selectedObjectR.transform.position = pos;
         }
-        if (!lefttHandDebugPC)
+        if (!RightHandDebugPC)
         {
-    
-            if(selectedObjectL != null && isDragging)
+
+            if (selectedObjectR != null && isDragging)
             {
-                Rigidbody selectRb = selectedObjectL.GetComponent<Rigidbody>();
+                Rigidbody selectRb = selectedObjectR.GetComponent<Rigidbody>();
                 selectRb.velocity = Vector3.forward.normalized * launchVelocity;
             }
             isDragging = false;
