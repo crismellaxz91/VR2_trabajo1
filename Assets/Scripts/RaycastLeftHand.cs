@@ -54,7 +54,7 @@ public class RaycastLeftHand : MonoBehaviour
         bool triggerValue;
         if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || lefttHandDebugPC)
         {
-           /* Debug.Log("Trigger button is pressed.");*/
+            Debug.Log("Left Trigger button is pressed.");
         }
         #region Funcionalidad De instancia de Objetos
 

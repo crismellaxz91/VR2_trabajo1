@@ -5,13 +5,14 @@ using UnityEngine.XR;
 
 public class Raycast : MonoBehaviour
 {
+    /*
     #region variables 
     [SerializeField]
     private LayerMask dragMask;
 
     public float distance;
 
-    public GameObject roca, agua/*,fuego, viento*/;
+    public GameObject roca, agua,fuego, viento;
 
     public GameObject selectedObjectR;
 
@@ -106,15 +107,15 @@ public class Raycast : MonoBehaviour
         {
             isDragging = false;
         }
-        /*if(Physics.Raycast(ray, out hit, distance, dragMask))
+        if(Physics.Raycast(ray, out hit, distance, dragMask))
         {
             if(hit.collider != null)
             {
                
             }
-        }*/
+        }
         
-      /*
+      
        if (Physics.Raycast(OriginPoint.position, fwd, out hit, distance))
         {
             endPoint = hit.point;
@@ -150,7 +151,7 @@ public class Raycast : MonoBehaviour
             Debug.Log("Nothing hit");
             //Debug.Log(hit.transform.position);
             endPoint = OriginPoint.position + (fwd.normalized * distance);
-        }*/
+        }
         #endregion
-    }
+    }*/
 }

@@ -269,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &187972795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -297,7 +297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tagTarget: Enemy
-  hp: 2
 --- !u!4 &187972797
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1148,10 @@ PrefabInstance:
       propertyPath: distance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: RightHandDebugPC
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1163,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403466169539470451, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 403466169539470460, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager

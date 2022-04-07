@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class EarthBending : Damage
 {
+    /*
     public int hp = 2;
-   /* new public void OnTriggerEnter(Collider other)
+    new public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(tagTarget))
         {
@@ -21,7 +22,7 @@ public class EarthBending : Damage
                 gameObject.SetActive(false);
             }
         }
-    }*/
+    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag(tagTarget))
@@ -37,5 +38,5 @@ public class EarthBending : Damage
                 gameObject.SetActive(false);
             }
         }
-    }
+    }*/
 }
