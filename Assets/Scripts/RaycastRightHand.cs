@@ -103,7 +103,7 @@ public class RaycastRightHand : MonoBehaviour
             if (selectedObjectR != null && isDragging)
             {
                 Rigidbody selectRb = selectedObjectR.GetComponent<Rigidbody>();
-                selectRb.velocity = Vector3.forward.normalized * launchVelocity;
+                selectRb.velocity = ray.direction.normalized * launchVelocity;
             }
             isDragging = false;
             /*Rigidbody selectRb = selectedObjectL.GetComponent<Rigidbody>();

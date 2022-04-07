@@ -7,7 +7,7 @@ public class Damage : MonoBehaviour
     public int damage;
     public string tagTarget;
     public Health health;
-    //public int hp;
+    public int hp;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -19,14 +19,14 @@ public class Damage : MonoBehaviour
 
                 health.TakeDamage(damage);
                 Debug.Log("hit");
-                /*if(gameObject.tag == "PushBullet")
+                if(gameObject.tag == "PushBullet")
                 {
                     hp--;
                     if (hp <= 0)
                     {
                         Destroy(gameObject);
                     }
-                }*/
+                }
                 if (gameObject.tag == "Bullet")
                 {
                     Destroy(gameObject);
