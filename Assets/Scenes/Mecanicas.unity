@@ -503,6 +503,8 @@ GameObject:
   - component: {fileID: 1703877846}
   - component: {fileID: 1703877845}
   - component: {fileID: 1703877844}
+  - component: {fileID: 1703877849}
+  - component: {fileID: 1703877850}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Agua
@@ -666,12 +668,46 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703877843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: -0.6, z: 5}
+  m_LocalPosition: {x: -1.61, y: -0.6, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1703877849
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703877843}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1703877850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703877843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8733daae2fcb99e44ab67eac81a9dace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConstAdditionalData: []
+  ManipType: 4
+  isInitialized: 0
+  AdditionalData: {x: 1, y: 0, z: 1, w: 0}
+  chosenSDFType: 1
+  InvertSDF: 0
 --- !u!1 &1735039577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,8 +1055,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: agua
+      value: 
+      objectReference: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
+    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: RightHandDebugPC
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: lefttHandDebugPC
@@ -1028,11 +1068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997251135, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1997251136, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1997251139, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Enabled
@@ -1052,7 +1092,7 @@ PrefabInstance:
       objectReference: {fileID: 468926913}
     - target: {fileID: 403466169539470451, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 403466169539470460, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
