@@ -865,7 +865,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   player: {fileID: 4560103923237579025}
-  distance: 4
+  distance: 3
   launchVelocity: 30
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
@@ -875,7 +875,7 @@ MonoBehaviour:
   instantiateHeight: 0.1
   xrNode_R: 5
   OriginPoint: {fileID: 403466167902459107}
-  RightHandDebugPC: 1
+  RightHandDebugPC: 0
 --- !u!1 &403466169539470451
 GameObject:
   m_ObjectHideFlags: 0

@@ -1140,42 +1140,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: distance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: RightHandDebugPC
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403466167902459119, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 468926913}
-    - target: {fileID: 403466167902459119, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_MaxRaycastDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 403466169539470451, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403466169539470460, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 468926913}
-    - target: {fileID: 403466169539470460, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_MaxRaycastDistance
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 4560103923237579025, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_RootOrder
       value: 2
