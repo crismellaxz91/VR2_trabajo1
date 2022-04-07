@@ -14,24 +14,21 @@ public class Damage : MonoBehaviour
             Health health = GetComponent<Health>();
             if(health != null)
             {
+
                 health.TakeDamage(damage);
-                hp--;
-                if(gameObject.tag == "PushBullet" && gameObject != null)
+                /*if(gameObject.tag == "PushBullet")
                 {
-                    if(hp <= 0)
+                    hp--;
+                    if (hp <= 0)
                     {
                         Destroy(gameObject);
                     }
-                }
-                if(gameObject.tag == "Bullet" && gameObject != null)
+                }*/
+                if(gameObject.tag == "Bullet")
                 {
                     Destroy(gameObject);
                 }
             }
         }
-    }
-    public void OnBecameInvisible()
-    {
-        Destroy(gameObject);
     }
 }
