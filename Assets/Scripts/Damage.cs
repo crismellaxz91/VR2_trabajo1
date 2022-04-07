@@ -6,16 +6,19 @@ public class Damage : MonoBehaviour
 {
     public int damage;
     public string tagTarget;
+    public Health health;
     //public int hp;
-    public void OnTriggerEnter(Collider other)
+
+    public void OnCollisionEnter(Collision collision)
     {
-        if(other.CompareTag(tagTarget))
+        if (collision.gameObject.CompareTag(tagTarget))
         {
-            Health health = GetComponent<Health>();
-            if(health != null)
+            health = collision.gameObject.GetComponent<Health>();
+            if (health != null)
             {
 
                 health.TakeDamage(damage);
+                Debug.Log("hit");
                 /*if(gameObject.tag == "PushBullet")
                 {
                     hp--;
@@ -24,11 +27,36 @@ public class Damage : MonoBehaviour
                         Destroy(gameObject);
                     }
                 }*/
-                if(gameObject.tag == "Bullet")
+                if (gameObject.tag == "Bullet")
                 {
                     Destroy(gameObject);
                 }
             }
         }
     }
+   /* public void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag(tagTarget))
+       {
+            health = other.GetComponent<Health>();
+            if(health != null)
+            {
+
+                health.TakeDamage(damage);
+                Debug.Log("hit");
+                /*if(gameObject.tag == "PushBullet")
+                {
+                    hp--;
+                    if (hp <= 0)
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+                if(gameObject.tag == "Bullet")
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }*/
 }

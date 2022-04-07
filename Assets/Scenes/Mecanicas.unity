@@ -152,7 +152,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73474123}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tagTarget: Enemy
+  health: {fileID: 0}
 --- !u!4 &187972797
 Transform:
   m_ObjectHideFlags: 0
@@ -1140,6 +1141,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: RightHandDebugPC
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 403466167902459119, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 

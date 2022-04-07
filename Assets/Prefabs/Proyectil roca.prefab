@@ -93,7 +93,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128935683}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -245,4 +245,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tagTarget: Enemy
-  hp: 2
+  health: {fileID: 0}
