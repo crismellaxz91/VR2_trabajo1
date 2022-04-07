@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 128935684}
   - component: {fileID: 1212240076}
   - component: {fileID: 8058266610596504911}
+  - component: {fileID: -8747185381921522522}
   m_Layer: 9
   m_Name: Proyectil roca
-  m_TagString: Untagged
+  m_TagString: PushBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +93,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128935683}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -230,3 +231,18 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-8747185381921522522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128935683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50cf70e8b66b5c4a9b3f7ab68e12ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  tagTarget: Enemy
+  hp: 2

@@ -6,6 +6,7 @@ public class Damage : MonoBehaviour
 {
     public int damage;
     public string tagTarget;
+    public int hp;
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag(tagTarget))
@@ -14,7 +15,23 @@ public class Damage : MonoBehaviour
             if(health != null)
             {
                 health.TakeDamage(damage);
+                hp--;
+                if(gameObject.tag == "PushBullet" && gameObject != null)
+                {
+                    if(hp <= 0)
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+                if(gameObject.tag == "Bullet" && gameObject != null)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
+    }
+    public void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

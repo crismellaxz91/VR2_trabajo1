@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Position
   - Bullet
+  - PushBullet
   layers:
   - Default
   - TransparentFX
