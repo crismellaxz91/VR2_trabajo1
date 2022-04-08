@@ -1054,46 +1054,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: agua
-      value: 
-      objectReference: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
-    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: RightHandDebugPC
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: lefttHandDebugPC
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997251135, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997251136, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997251139, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 403466167902459105, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_ValidColorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 403466167902459105, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403466167902459119, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 468926913}
-    - target: {fileID: 403466169539470451, guid: a834519a09246fc4288d98eaff269f65, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403466169539470460, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
