@@ -2534,6 +2534,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Puedes agarrar rocas del escenario o las que son invocadas al presionar
     el boton trigger. El mineral de la laguna es de metal, no se puede levantar.
+    Tambien puedes invocar projectiles de agua si apuntas hacia la laguna.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2560,7 +2561,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.15
+  m_fontSize: 26.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2596,7 +2597,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -159.38937, y: 0, z: -419.9068, w: -46.321568}
+  m_margin: {x: -159.38937, y: 0, z: -419.9068, w: -71.53267}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
