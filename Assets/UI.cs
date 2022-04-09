@@ -21,6 +21,18 @@ public class UI : MonoBehaviour
     public TMP_Text tMP_Text;
     public TMP_Text youWin;
     public int enemiesLeft;
+    public GameObject tutorial;
+    public void Start()
+    {
+        if(tutorial != null)
+        {
+            Destroy(tutorial, 5f);
+        }
+        else
+        {
+            Debug.Log("Tutorial finished");
+        }
+    }
     public void Update()
     {
         GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemy");
