@@ -9,6 +9,10 @@ public class Damage : MonoBehaviour
     public Health health;
     public int hp;
 
+    public void Start()
+    {
+        
+    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(tagTarget))
