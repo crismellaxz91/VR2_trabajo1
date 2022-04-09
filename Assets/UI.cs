@@ -19,11 +19,17 @@ public class UI : MonoBehaviour
          }
      }*/
     public TMP_Text tMP_Text;
+    public TMP_Text youWin;
     public int enemiesLeft;
     public void Update()
     {
         GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemy");
         enemiesLeft = enemigos.Length;
         tMP_Text.text = "Enemigos:" + " "+ enemiesLeft.ToString();
+        if(enemiesLeft == 0)
+        {
+            tMP_Text.enabled = false;
+            youWin.enabled = true;
+        }
     }
 }
