@@ -51,8 +51,8 @@ public class RaycastLeftHand : MonoBehaviour
     public void Update()
     {
         OnEnable();
-        bool triggerValue;
-        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue || lefttHandDebugPC)
+        float triggerValue;
+        if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue <= 1f || lefttHandDebugPC)
         {
             Debug.Log("Left Trigger button is pressed.");
         }
@@ -62,11 +62,11 @@ public class RaycastLeftHand : MonoBehaviour
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         ray = new Ray(OriginPoint.transform.position, fwd);
-        if (lefttHandDebugPC || triggerValue)
+        if (lefttHandDebugPC || triggerValue <= 1f)
         {
             if(Physics.Raycast(ray, out hit,distance ))
             {
-                if (hit.collider.CompareTag("Tierra") && triggerValue || hit.collider.CompareTag("Tierra") && lefttHandDebugPC)
+                if (hit.collider.CompareTag("Tierra") && triggerValue <= 1f || hit.collider.CompareTag("Tierra") && lefttHandDebugPC)
                 {
                     if(maxProjectiles < 1)
                     {
@@ -74,7 +74,7 @@ public class RaycastLeftHand : MonoBehaviour
                         maxProjectiles++;
                     }
                 }
-                else if(hit.collider.CompareTag("Agua") && triggerValue || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
+                else if(hit.collider.CompareTag("Agua") && triggerValue <= 1f || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
                 {
                     if (maxProjectiles < 1)
                     {

@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 1703877849}
   - component: {fileID: 1703877850}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: agua 2
   m_TagString: Agua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,12 +950,12 @@ GameObject:
   - component: {fileID: 1746881951}
   - component: {fileID: 1746881950}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: fuego
   m_TagString: Fuego
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1746881950
 Rigidbody:
   m_ObjectHideFlags: 0
