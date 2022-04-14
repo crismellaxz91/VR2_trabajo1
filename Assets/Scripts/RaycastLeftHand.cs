@@ -56,6 +56,7 @@ public class RaycastLeftHand : MonoBehaviour
         {
             Debug.Log("Left Trigger button is pressed.");
         }
+         
         #region Funcionalidad De instancia de Objetos
 
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
