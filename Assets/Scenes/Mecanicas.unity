@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73474123}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.2, z: 6.1}
+  m_LocalPosition: {x: 0, y: 0.02, z: 6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -490,6 +490,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5541835880259357135, guid: c5039ad2a9b65ce41b52233eb37c1714, type: 3}
   m_PrefabInstance: {fileID: 5541835881694233616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1693849745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 403466169539470451, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+  m_PrefabInstance: {fileID: 403466167734584454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1693849752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693849745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a11f897a4dafa44baaa96d2a5dbabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 3
+  launchVelocity: 30
+  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
+  agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
+  selectedObjectL: {fileID: 0}
+  maxProjectiles: 0
+  isDragging: 0
+  fwd: {x: 0, y: 0, z: 0}
+  xrNode_L: 4
+  OriginPoint: {fileID: 403466167734584458}
+  rocaInstance: {fileID: 0}
+  aguaInstance: {fileID: 0}
+  valorTrigger: 0
+  hiting: 0
+  leftHandDebugPC: 1
 --- !u!1 &1703877843
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +541,7 @@ GameObject:
   - component: {fileID: 1703877849}
   - component: {fileID: 1703877850}
   m_Layer: 0
-  m_Name: agua 2
+  m_Name: water cube
   m_TagString: Agua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +985,7 @@ GameObject:
   - component: {fileID: 1746881951}
   - component: {fileID: 1746881950}
   m_Layer: 0
-  m_Name: fuego
+  m_Name: fire
   m_TagString: Fuego
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1167,6 +1202,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: agua
+      value: 
+      objectReference: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
+    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: leftHandDebugPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: lefttHandDebugPC
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 403466167902459119, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -1225,6 +1280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+--- !u!4 &403466167734584458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 403466167902459107, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+  m_PrefabInstance: {fileID: 403466167734584454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5541835881694233616
 PrefabInstance:
   m_ObjectHideFlags: 0

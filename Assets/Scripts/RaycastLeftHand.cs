@@ -38,7 +38,7 @@ public class RaycastLeftHand : MonoBehaviour
     public GameObject rocaInstance;
     public bool hiting;
 
-    public bool lefttHandDebugPC;
+    public bool leftHandDebugPC;
     void GetDevice()
     {
         device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
@@ -54,23 +54,27 @@ public class RaycastLeftHand : MonoBehaviour
     {
         OnEnable();
         float triggerValue;
-        if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue == 1f || lefttHandDebugPC)
+        if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue == 1f || leftHandDebugPC)
         {
-            Debug.Log("Left Trigger button is pressed.");
+            Debug.Log("Trigger values is " + triggerValue);
         }
          
         #region Funcionalidad De instancia de Objetos
-
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-        Debug.Log(triggerValue);
-
+        if(leftHandDebugPC)
+        {
+            triggerValue = 1f;
+        }    
+        else
+        {
+            triggerValue = 0f;
+        }
         ray = new Ray(OriginPoint.transform.position, fwd);
-        if (lefttHandDebugPC || triggerValue == 1f)
+        if (leftHandDebugPC || triggerValue == 1f)
         {
             if (Physics.Raycast(ray, out hit, distance))
             {
-                if (hit.collider.CompareTag("Tierra") && triggerValue > 0.9f && !rocaInstance || hit.collider.CompareTag("Tierra") && lefttHandDebugPC)
+                if (hit.collider.CompareTag("Tierra") && triggerValue > 0.9f && !rocaInstance /*|| hit.collider.CompareTag("Tierra") && leftHandDebugPC*/)
                 {
                     if (maxProjectiles < 1)
                     {
@@ -81,14 +85,12 @@ public class RaycastLeftHand : MonoBehaviour
 
                         if (isDragging && triggerValue == 1 && hit.point == null)
                         {
-
                             Vector3 pos = OriginPoint.position + ray.direction * distance;
                             selectedObjectL.transform.position = pos;
-
                         }
                     }
                 }
-                else if (hit.collider.CompareTag("Agua") && triggerValue <= 1f || hit.collider.CompareTag("Agua") && lefttHandDebugPC)
+                else if (hit.collider.CompareTag("Agua") && triggerValue <= 1f || hit.collider.CompareTag("Agua") && leftHandDebugPC)
                 {
                     if (maxProjectiles < 1)
                     {
@@ -111,11 +113,11 @@ public class RaycastLeftHand : MonoBehaviour
         if (isDragging && triggerValue == 1)
         {
             
-            //Vector3 pos = OriginPoint.position + ray.direction * distance;
-            //selectedObjectL.transform.position = pos;
+            Vector3 pos = OriginPoint.position + ray.direction * distance;
+            selectedObjectL.transform.position = pos;
            
         }
-        if (!lefttHandDebugPC || triggerValue == 0)
+        if (!leftHandDebugPC || triggerValue == 0)
         {
     
             if(selectedObjectL != null && !isDragging)
