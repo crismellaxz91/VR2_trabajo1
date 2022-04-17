@@ -31,7 +31,9 @@ public class Raycast : MonoBehaviour
     private XRNode xrNode_L = XRNode.LeftHand;
     private InputDevice device_L;
     #endregion
+
     #region Nuevasvariables
+
     public Transform OriginPoint;
     [SerializeField]
     private GameObject objectInstance;
@@ -56,12 +58,23 @@ public class Raycast : MonoBehaviour
     public void Update()
     {
         OnEnable();
+
+
         float triggerValue;
+        bool triggerBool;
         if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue == 1f )
         {
             Debug.Log("Trigger values is " + triggerValue);
         }
+        
+        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
+        {
+            //Debug.Log("Trigger values is " + triggerValue);
+        }
+
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
+
+
         #region boolDebug
         if (leftHandDebugPC)
         {
@@ -71,7 +84,11 @@ public class Raycast : MonoBehaviour
         {
             triggerValue = 0f;
         }
+
+
         #endregion
+
+
         #region valorDelTrigger
         if (triggerValue == 1)
         {
@@ -82,7 +99,9 @@ public class Raycast : MonoBehaviour
             valorTrigger = 0;
         }
         #endregion
+
         ray = new Ray(OriginPoint.transform.position, fwd);
+
         if (triggerValue == 1f)
         {
             if (Physics.Raycast(ray, out hit, distance))
@@ -102,7 +121,11 @@ public class Raycast : MonoBehaviour
                     }
                 }
             }
+
+
             RaycastDrag();
+
+
             if (isDragging && valorTrigger == 1)
             {
                 if(hit.point != null)

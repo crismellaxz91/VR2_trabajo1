@@ -1429,7 +1429,9 @@ MonoBehaviour:
   instantiateHeight: 0.1
   xrNode_L: 4
   OriginPoint: {fileID: 403466169539470448}
-  lefttHandDebugPC: 0
+  rocaInstance: {fileID: 0}
+  hiting: 0
+  leftHandDebugPC: 0
 --- !u!1 &866065298029023740
 GameObject:
   m_ObjectHideFlags: 0
