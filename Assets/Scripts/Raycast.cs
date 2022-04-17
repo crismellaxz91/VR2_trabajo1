@@ -37,9 +37,11 @@ public class Raycast : MonoBehaviour
     private GameObject objectInstance;
     
     public float valorTrigger;
+
     public bool hiting;
-    #endregion
+
     public bool leftHandDebugPC; //debug
+    #endregion
     void GetDevice()
     {
         device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
@@ -55,11 +57,12 @@ public class Raycast : MonoBehaviour
     {
         OnEnable();
         float triggerValue;
-        if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue == 1f || leftHandDebugPC)
+        if (device_L.TryGetFeatureValue(CommonUsages.trigger, out triggerValue) && triggerValue == 1f )
         {
             Debug.Log("Trigger values is " + triggerValue);
         }
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        #region boolDebug
         if (leftHandDebugPC)
         {
             triggerValue = 1f;
@@ -68,43 +71,50 @@ public class Raycast : MonoBehaviour
         {
             triggerValue = 0f;
         }
-
+        #endregion
+        #region valorDelTrigger
+        if (triggerValue == 1)
+        {
+            valorTrigger = 1;
+        }
+        else
+        {
+            valorTrigger = 0;
+        }
+        #endregion
         ray = new Ray(OriginPoint.transform.position, fwd);
-        if (leftHandDebugPC || triggerValue == 1f)
+        if (triggerValue == 1f)
         {
             if (Physics.Raycast(ray, out hit, distance))
             {
-                if (hit.collider.CompareTag("Tierra") && triggerValue > 0.9f && !objectInstance /*|| hit.collider.CompareTag("Tierra") && leftHandDebugPC*/)
+                if (hit.collider.CompareTag("Tierra") && valorTrigger > 0.9f && !objectInstance)
                 {
                     if (maxProjectiles < 1)
                     {
                         InstanceRock();
                     }
                 }
-                else if (hit.collider.CompareTag("Agua") && triggerValue <= 1f && !objectInstance /*|| hit.collider.CompareTag("Agua") && leftHandDebugPC*/)
+                else if (hit.collider.CompareTag("Agua") && valorTrigger <= 1f && !objectInstance)
                 {
                     if (maxProjectiles < 1)
                     {
                         InstaceWater();  
                     }
                 }
-
-
             }
             RaycastDrag();
-            if (isDragging && triggerValue == 1)
+            if (isDragging && valorTrigger == 1)
             {
                 if(hit.point != null)
                 {
-                    Vector3 pos = OriginPoint.transform.position + ray.direction * distance;
+                    Vector3 pos = OriginPoint.position + ray.direction * distance;
                     selectedObjectL.transform.position = pos;
                 }
             }
         }
         #region Lanzamiento
-        if (!leftHandDebugPC || triggerValue == 0)
+        if (valorTrigger == 0)
         {
-
             if (selectedObjectL != null && !isDragging)
             {
                 Rigidbody selectRb = selectedObjectL.GetComponent<Rigidbody>();

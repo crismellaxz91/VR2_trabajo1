@@ -502,7 +502,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693849745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16a11f897a4dafa44baaa96d2a5dbabd, type: 3}
   m_Name: 
@@ -517,11 +517,9 @@ MonoBehaviour:
   selectedObjectL: {fileID: 0}
   maxProjectiles: 0
   isDragging: 0
-  fwd: {x: 0, y: 0, z: 0}
   xrNode_L: 4
   OriginPoint: {fileID: 403466167734584458}
-  rocaInstance: {fileID: 0}
-  aguaInstance: {fileID: 0}
+  objectInstance: {fileID: 0}
   valorTrigger: 0
   hiting: 0
   leftHandDebugPC: 1
