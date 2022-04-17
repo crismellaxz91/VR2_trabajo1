@@ -493,6 +493,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6598815579406187026, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -543,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -576,8 +580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d33a17788ea708419e690660c725f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoint: {x: 0, y: 0, z: 0}
   triggerBool: 0
-  maxProjectiles: 0
   dragMask:
     serializedVersion: 2
     m_Bits: 512
@@ -585,7 +589,9 @@ MonoBehaviour:
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
   objectInstance: {fileID: 0}
+  launchVelocity: 0
   pivotOrigin: {fileID: 1693849746}
+  leftHandDebugPC: 0
   xrNode_L: 4
 --- !u!4 &1150973265
 Transform:

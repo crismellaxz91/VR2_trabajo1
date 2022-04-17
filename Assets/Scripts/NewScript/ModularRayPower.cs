@@ -9,8 +9,6 @@ public class ModularRayPower : MonoBehaviour
     
     public bool triggerBool;
 
-    public int maxProjectiles;
-
     private Ray ray;
     private RaycastHit hit;
     public LayerMask dragMask;
@@ -19,10 +17,12 @@ public class ModularRayPower : MonoBehaviour
     public GameObject roca;
     public GameObject agua;
     public GameObject objectInstance;
+    public float launchVelocity;
 
     [Header("Transforms")]
     public Transform pivotOrigin;
 
+    public bool leftHandDebugPC; //debug
 
     #region nodesAndInput
     [SerializeField]
@@ -40,18 +40,30 @@ public class ModularRayPower : MonoBehaviour
         {
             GetDevice();
         }
+        else if(leftHandDebugPC)
+        {
+            GetDevice();
+        }
     }
     #endregion
 
     private void Update()
     {
+        if(leftHandDebugPC) //debug
+        {
+            triggerBool = true;
+        }
+        else if(!leftHandDebugPC)
+        {
+            triggerBool = false;
+        }
         OnEnable();
 
         if (objectInstance != null)
         {
             RaycastDrag();
         }
-        
+
 
         if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
         {
@@ -87,27 +99,36 @@ public class ModularRayPower : MonoBehaviour
 
             if (hit.point == Vector3.zero)
             {
+                objectInstance.transform.position = hit.point;
+            }
+            if (hit.point != Vector3.zero && hit.collider.gameObject.layer == dragMask) //( cambiar a != dragMask) si es que no funciona
+            {
                 Vector3 pos = pivotOrigin.position + ray.direction * distance;
                 objectInstance.transform.position = pos;
             }
-            if (hit.point != Vector3.zero && hit.collider.gameObject.layer != dragMask)
-            { 
-               objectInstance.transform.position = hit.point;
-            }
-            
+            //Vector3 pos = pivotOrigin.position + ray.direction * distance; //poner debajo de hit.point == Vector3.zero
+            //objectInstance.transform.position = pos;
 
-         }
+            //objectInstance.transform.position = hit.point; // poner debajo de hit.point != Vector3.zero && hit.collider.gameObject.layer != dragMask
+        }
     }
 
     public void InstanceRock()
     {
-        maxProjectiles++;
         objectInstance = Instantiate(roca, hit.point, Quaternion.identity);
     }
 
     public void InstaceWater()
-    {
-        maxProjectiles++;
+    {    
         objectInstance = Instantiate(agua, hit.point, Quaternion.identity);
+    }
+    public void ThrowProjectile()
+    {
+        if(!triggerBool)
+        {
+            Rigidbody selectRb = objectInstance.GetComponent<Rigidbody>();
+            selectRb.velocity = ray.direction.normalized * launchVelocity;
+        }
+        objectInstance = null;
     }
 }
