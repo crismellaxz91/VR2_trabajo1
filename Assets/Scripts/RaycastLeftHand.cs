@@ -120,7 +120,7 @@ public class RaycastLeftHand : MonoBehaviour
         if (!leftHandDebugPC || triggerValue == 0)
         {
     
-            if(selectedObjectL != null && !isDragging)
+            if(selectedObjectL != null && isDragging)
             {
                 Rigidbody selectRb = selectedObjectL.GetComponent<Rigidbody>();
                 selectRb.velocity = ray.direction.normalized * launchVelocity;

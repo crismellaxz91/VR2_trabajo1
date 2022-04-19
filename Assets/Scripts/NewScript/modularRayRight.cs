@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class ModularRayPower : MonoBehaviour
+public class modularRayRight : MonoBehaviour
 {
     public Vector3 hitPoint;
-    
+
     public bool triggerBool;
 
     public bool dragging;
@@ -27,25 +27,25 @@ public class ModularRayPower : MonoBehaviour
     //public Transform objectHold;
     //objectHold.position = pivotOrigin.position + ray.direction * distance;
 
-    public bool leftHandDebugPC; //debug
+    public bool rightHandDebugPC; //debug
 
     #region nodesAndInput
     [SerializeField]
-    private XRNode xrNode_L = XRNode.LeftHand;
-    private InputDevice device_L;
+    private XRNode xrNode_R = XRNode.RightHand;
+    private InputDevice device_R;
 
 
     void GetDevice()
     {
-        device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
+        device_R = InputDevices.GetDeviceAtXRNode(xrNode_R);
     }
     private void OnEnable()
     {
-        if (!device_L.isValid)
+        if (!device_R.isValid)
         {
             GetDevice();
         }
-        else if(leftHandDebugPC)
+        else if (rightHandDebugPC)
         {
             GetDevice();
         }
@@ -61,14 +61,14 @@ public class ModularRayPower : MonoBehaviour
             RaycastDrag();
         }
 
-        if(!dragging)
+        if (!dragging)
         {
             objectInstance = null;
         }
 
         Launching();
 
-        if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
+        if (device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
         {
             Debug.Log("Triggering");
         }
@@ -79,15 +79,15 @@ public class ModularRayPower : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distance))
         {
-            if (hit.collider.CompareTag("Tierra") && triggerBool  && !objectInstance || hit.collider.CompareTag("Tierra") && leftHandDebugPC && !objectInstance)
+            if (hit.collider.CompareTag("Tierra") && triggerBool && !objectInstance || hit.collider.CompareTag("Tierra") && rightHandDebugPC && !objectInstance)
             {
                 InstanceRock();
 
             }
-            else if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && leftHandDebugPC && !objectInstance)
+            else if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && rightHandDebugPC && !objectInstance)
             {
                 InstaceWater();
-                
+
             }
         }
         hitPoint = hit.point;
@@ -96,7 +96,7 @@ public class ModularRayPower : MonoBehaviour
 
     public void RaycastDrag()
     {
-        if (triggerBool || leftHandDebugPC)
+        if (triggerBool || rightHandDebugPC)
         {
             dragging = true;
             if (hit.point == Vector3.zero)
@@ -104,11 +104,11 @@ public class ModularRayPower : MonoBehaviour
                 Vector3 pos = pivotOrigin.position + ray.direction * distance;
                 objectInstance.transform.position = pos;
             }
-            else if(hit.point != Vector3.zero && hit.collider.gameObject.layer != dragMask)
+            else if (hit.point != Vector3.zero && hit.collider.gameObject.layer != dragMask)
             {
                 objectInstance.transform.position = hit.point;
             }
-            
+
         }
     }
     public void InstanceRock()
@@ -117,14 +117,14 @@ public class ModularRayPower : MonoBehaviour
     }
 
     public void InstaceWater()
-    {    
+    {
         objectInstance = Instantiate(agua, hit.point, Quaternion.identity);
     }
     public void Launching()
     {
-        if(objectInstance != null && dragging)
+        if (objectInstance != null && dragging)
         {
-            if (triggerBool == false || leftHandDebugPC == false)
+            if (triggerBool == false || rightHandDebugPC == false)
             {
                 Rigidbody selectRb = objectInstance.GetComponent<Rigidbody>();
                 selectRb.velocity = ray.direction.normalized * launchVelocity;

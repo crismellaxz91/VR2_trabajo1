@@ -581,7 +581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoint: {x: 0, y: 0, z: 0}
-  triggerBool: 0
+  triggerBool: 1
+  dragging: 0
   dragMask:
     serializedVersion: 2
     m_Bits: 512
@@ -589,9 +590,9 @@ MonoBehaviour:
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
   objectInstance: {fileID: 0}
-  launchVelocity: 0
+  launchVelocity: 30
   pivotOrigin: {fileID: 1693849746}
-  leftHandDebugPC: 0
+  leftHandDebugPC: 1
   xrNode_L: 4
 --- !u!4 &1150973265
 Transform:
@@ -601,11 +602,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150973263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.582459, y: -3.7595518, z: 2.2039466}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1153175473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153175474}
+  m_Layer: 10
+  m_Name: Item Hold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153175474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153175473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1693849746}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533760442
 GameObject:
@@ -1592,13 +1623,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 695814389, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+      propertyPath: RightHandDebugPC
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: agua
       value: 
       objectReference: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
     - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 851619942, guid: a834519a09246fc4288d98eaff269f65, type: 3}
       propertyPath: leftHandDebugPC
