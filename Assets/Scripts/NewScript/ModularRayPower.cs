@@ -19,6 +19,7 @@ public class ModularRayPower : MonoBehaviour
     public GameObject roca;
     public GameObject agua;
     public GameObject fuego;
+    public GameObject viento;
     public GameObject objectInstance;
     public float launchVelocity;
 
