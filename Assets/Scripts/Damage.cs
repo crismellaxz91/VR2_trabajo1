@@ -38,29 +38,16 @@ public class Damage : MonoBehaviour
             }
         }
     }
-   /* public void OnTriggerEnter(Collider other)
+    public void OnBecameInvisible()
     {
-        if(other.CompareTag(tagTarget))
-       {
-            health = other.GetComponent<Health>();
-            if(health != null)
-            {
-
-                health.TakeDamage(damage);
-                Debug.Log("hit");
-                /*if(gameObject.tag == "PushBullet")
-                {
-                    hp--;
-                    if (hp <= 0)
-                    {
-                        Destroy(gameObject);
-                    }
-                }
-                if(gameObject.tag == "Bullet")
-                {
-                    Destroy(gameObject);
-                }
-            }
+        if (gameObject.tag == "PushBullet")
+        {
+                Destroy(gameObject, 0.5f);
         }
-    }*/
+
+        if (gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
