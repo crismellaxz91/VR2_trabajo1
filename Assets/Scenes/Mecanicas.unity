@@ -5441,6 +5441,7 @@ MonoBehaviour:
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
   fuego: {fileID: 0}
+  viento: {fileID: 0}
   objectInstance: {fileID: 0}
   launchVelocity: 30
   pivotOrigin: {fileID: 1693849746}
@@ -6620,63 +6621,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 403466167902459107, guid: a834519a09246fc4288d98eaff269f65, type: 3}
   m_PrefabInstance: {fileID: 403466167734584454}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2369105322290092344
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697998, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413080955522697999, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
-      propertyPath: m_Name
-      value: Viento
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e98d5b0817f5f9443b449c23791e6200, type: 3}
 --- !u!1001 &5541835881694233616
 PrefabInstance:
   m_ObjectHideFlags: 0
