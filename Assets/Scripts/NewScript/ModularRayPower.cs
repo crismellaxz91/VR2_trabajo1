@@ -120,6 +120,10 @@ public class ModularRayPower : MonoBehaviour
     {    
         objectInstance = Instantiate(agua, hit.point, Quaternion.identity);
     }
+    //public void InstaceFire()
+    //{
+    //    objectInstance = Instantiate(fuego, hit.point, Quaternion.identity);
+    //}
     public void Launching()
     {
         if(objectInstance != null && dragging)
