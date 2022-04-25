@@ -1,5 +1,121 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1150973263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150973265}
+  - component: {fileID: 1150973264}
+  - component: {fileID: 1150973266}
+  m_Layer: 0
+  m_Name: Mecanics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150973265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150973263}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4560103923237579025}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150973264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150973263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d33a17788ea708419e690660c725f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoint: {x: 0, y: 0, z: 0}
+  triggerBool: 1
+  dragging: 0
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 5
+  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
+  agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
+  fuego: {fileID: 3216694570263898469, guid: 78221e994d9e66040bf0f775e04b26ba, type: 3}
+  viento: {fileID: 0}
+  objectInstance: {fileID: 0}
+  launchVelocity: 30
+  pivotOrigin: {fileID: 403466169539470448}
+  leftHandDebugPC: 1
+  xrNode_L: 4
+--- !u!114 &1150973266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150973263}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a9d9386de201b41862b76da0a70733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoint: {x: 0, y: 0, z: 0}
+  triggerBool: 1
+  dragging: 0
+  dragMask:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 5
+  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
+  agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
+  objectInstance: {fileID: 0}
+  launchVelocity: 30
+  pivotOrigin: {fileID: 403466167902459107}
+  rightHandDebugPC: 0
+  xrNode_R: 5
+--- !u!1 &1153175473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153175474}
+  m_Layer: 10
+  m_Name: Item Hold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153175474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153175473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403466169539470448}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997251134
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +469,6 @@ GameObject:
   - component: {fileID: 403466167902459118}
   - component: {fileID: 403466167902459105}
   - component: {fileID: 403466167902459104}
-  - component: {fileID: 695814389}
   m_Layer: 10
   m_Name: Right Hand Interactor
   m_TagString: Untagged
@@ -858,33 +973,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &695814389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403466167902459106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641cf6dedf4ce98419887123dedf6342, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dragMask:
-    serializedVersion: 2
-    m_Bits: 512
-  player: {fileID: 4560103923237579025}
-  distance: 3
-  launchVelocity: 30
-  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
-  agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
-  selectedObjectR: {fileID: 0}
-  maxProjectiles: 0
-  isDragging: 0
-  instantiateHeight: 0.1
-  xrNode_R: 5
-  OriginPoint: {fileID: 403466167902459107}
-  RightHandDebugPC: 0
 --- !u!1 &403466169539470451
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +986,6 @@ GameObject:
   - component: {fileID: 403466169539470463}
   - component: {fileID: 403466169539470462}
   - component: {fileID: 403466169539470449}
-  - component: {fileID: 851619942}
   m_Layer: 10
   m_Name: Left Hand Interactor
   m_TagString: Untagged
@@ -918,6 +1005,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4024734428600589166}
+  - {fileID: 1153175474}
   m_Father: {fileID: 4560103923237579025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1403,35 +1491,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &851619942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403466169539470451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134ea0f336cbd9f4aabdc8f8ed85b279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dragMask:
-    serializedVersion: 2
-    m_Bits: 512
-  player: {fileID: 4560103923237579025}
-  distance: 4
-  launchVelocity: 30
-  roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
-  agua: {fileID: 8167470721227383097, guid: e775c3dff1208884daf8d6ddab383fb1, type: 3}
-  selectedObjectL: {fileID: 0}
-  maxProjectiles: 0
-  isDragging: 0
-  instantiateHeight: 0.1
-  xrNode_L: 4
-  OriginPoint: {fileID: 403466169539470448}
-  rocaInstance: {fileID: 0}
-  hiting: 0
-  leftHandDebugPC: 0
 --- !u!1 &866065298029023740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1534,6 @@ GameObject:
   - component: {fileID: 6437076020500290586}
   - component: {fileID: 1921195928126437383}
   - component: {fileID: 403466169666542933}
-  - component: {fileID: 978322474}
   - component: {fileID: 978322475}
   m_Layer: 10
   m_Name: XR Origin
@@ -1499,6 +1557,7 @@ Transform:
   - {fileID: 403466169539470448}
   - {fileID: 403466167902459107}
   - {fileID: 1997251138}
+  - {fileID: 1150973265}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1542,27 +1601,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 9027929357194777022}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2.1634624
   m_Direction: 1
   m_Center: {x: 0, y: 0.07140243, z: 0}
---- !u!54 &978322474
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9027929357194777022}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!114 &978322475
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -86,10 +86,15 @@ public class ModularRayPower : MonoBehaviour
                 InstanceRock();
 
             }
-            else if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && leftHandDebugPC && !objectInstance)
+            if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && leftHandDebugPC && !objectInstance)
             {
                 InstaceWater();
                 
+            }
+            if (hit.collider.CompareTag("Fuego") && triggerBool && !objectInstance || hit.collider.CompareTag("Fuego") && leftHandDebugPC && !objectInstance)
+            {
+                InstaceFire();
+
             }
         }
         hitPoint = hit.point;
@@ -122,10 +127,10 @@ public class ModularRayPower : MonoBehaviour
     {    
         objectInstance = Instantiate(agua, hit.point, Quaternion.identity);
     }
-    //public void InstaceFire()
-    //{
-    //    objectInstance = Instantiate(fuego, hit.point, Quaternion.identity);
-    //}
+    public void InstaceFire()
+    {
+        objectInstance = Instantiate(fuego, hit.point, Quaternion.identity);
+    }
     public void Launching()
     {
         if(objectInstance != null && dragging)
