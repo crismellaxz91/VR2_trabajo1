@@ -19,7 +19,7 @@ public class ModularRayPower : MonoBehaviour
     public GameObject roca;
     public GameObject agua;
     public GameObject fuego;
-    public GameObject viento;
+    public GameObject aire;
     public GameObject objectInstance;
     public float launchVelocity;
 
@@ -96,6 +96,11 @@ public class ModularRayPower : MonoBehaviour
                 InstaceFire();
 
             }
+            if (hit.collider.CompareTag("Viento") && triggerBool && !objectInstance || hit.collider.CompareTag("Viento") && leftHandDebugPC && !objectInstance)
+            {
+                InstanceAir();
+            }
+
         }
         hitPoint = hit.point;
         #endregion
@@ -130,6 +135,10 @@ public class ModularRayPower : MonoBehaviour
     public void InstaceFire()
     {
         objectInstance = Instantiate(fuego, hit.point, Quaternion.identity);
+    }
+    public void InstanceAir()
+    {
+        objectInstance = Instantiate(aire, hit.point, Quaternion.identity);
     }
     public void Launching()
     {
