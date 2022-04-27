@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 3216694570263898465}
   - component: {fileID: 6692258555067485237}
   m_Layer: 0
-  m_Name: FuegoProyectil
+  m_Name: ProyectilFuego
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
