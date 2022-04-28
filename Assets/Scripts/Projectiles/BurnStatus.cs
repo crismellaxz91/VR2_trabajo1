@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class BurnStatus : MonoBehaviour
 {
-
-
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.GetComponent<DamageOverTime>() != null)
+        if(collision.gameObject.GetComponent<EnemyStatus>() != null)
         {
-            collision.gameObject.GetComponent<DamageOverTime>().ApplyBurn(4);
+            collision.gameObject.GetComponent<EnemyStatus>().ApplyBurn(4);
         }
     }
 }
