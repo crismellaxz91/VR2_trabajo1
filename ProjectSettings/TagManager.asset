@@ -13,6 +13,7 @@ TagManager:
   - Position
   - Bullet
   - PushBullet
+  - AoE
   layers:
   - Default
   - TransparentFX

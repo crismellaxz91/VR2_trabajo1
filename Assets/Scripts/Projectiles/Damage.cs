@@ -46,4 +46,8 @@ public class Damage : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void DestroyWind() //Destroy the Wind AoE that pushes the enemies
+    {
+        Destroy(gameObject);
+    }
 }
