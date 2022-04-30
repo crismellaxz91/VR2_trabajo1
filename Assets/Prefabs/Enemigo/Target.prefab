@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4593169803932738994}
   - component: {fileID: 4593169803932738995}
   - component: {fileID: 1258274599}
+  - component: {fileID: 956226556}
   m_Layer: 0
   m_Name: Target
   m_TagString: Enemy
@@ -36,6 +37,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7964023244153167455}
+  - {fileID: 1879901447958331824}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 133.593, z: 0}
@@ -138,7 +140,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4593169803932739003}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
   m_Speed: 3.5
@@ -178,9 +180,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba0edf7dfc90a942b1cf5949a138608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  burnTickTimers: 
+  burningTickTimers: 
   dot: 1
   fireParticles: {fileID: 7964023244153167453}
+  icyParticles: {fileID: 1879901447958331855}
+  freezingTickTimers: 
+--- !u!114 &956226556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593169803932739003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fadf025c7708af4bb028736ecdbd3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 350
 --- !u!1 &7964023244153167453
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7964023244153167455
 Transform:
   m_ObjectHideFlags: 0
@@ -5110,3 +5127,70 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &1917238923
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4593169803932738993}
+    m_Modifications:
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.104
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879901448725741380, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+      propertyPath: m_Name
+      value: IceDebuff
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+--- !u!1 &1879901447958331855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1879901448725741380, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+  m_PrefabInstance: {fileID: 1917238923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1879901447958331824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1879901448725741371, guid: cd5b6812ba07c30448aabd7447a64971, type: 3}
+  m_PrefabInstance: {fileID: 1917238923}
+  m_PrefabAsset: {fileID: 0}
