@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: b267ecd829fafae4582c93f642a46e8f
+  - enabled: 1
+    path: Assets/Scenes/Etapa 1.unity
+    guid: 227b01228fc2f074a9c671630b045c8e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b6f1fdeb575bf3048a518ae48a47fd2b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0b21c10905ff5624aa3a323af6ffe5b4, type: 2}

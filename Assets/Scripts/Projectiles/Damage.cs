@@ -9,6 +9,11 @@ public class Damage : MonoBehaviour
     [SerializeField]
     private Health health;
     public int hp;
+
+    public void Start()
+    {
+        
+    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(tagTarget))
