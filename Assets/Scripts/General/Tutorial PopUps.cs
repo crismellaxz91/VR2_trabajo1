@@ -10,22 +10,22 @@ public class TutorialPopUps : MonoBehaviour
     private XRNode xrNode_L = XRNode.LeftHand;
     private InputDevice device_L;
 
-    void Update()
-    {
-        for (int i = 0; i < popUps.length; i++)
-        {
-            if(i == popUpIndex)
-            {
-                popUps[popUpIndex].SetActive(true);
-            }
-            else
-            {
-                popUps[popUpIndex].SetActive(false);
-            }
-        }
-        if(popUpIndex == 0)
-        {
+    //void Update()
+    //{
+    //    for (int i = 0; i < popUps.length; i++)
+    //    {
+    //        if(i == popUpIndex)
+    //        {
+    //            popUps[popUpIndex].SetActive(true);
+    //        }
+    //        else
+    //        {
+    //            popUps[popUpIndex].SetActive(false);
+    //        }
+    //    }
+    //    if(popUpIndex == 0)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }
