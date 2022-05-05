@@ -29,10 +29,10 @@ public class ModularRayPower : MonoBehaviour
     public bool leftHandDebugPC; 
 
     #region nodesAndInput
-    [SerializeField]
     private XRNode xrNode_L = XRNode.LeftHand;
     private InputDevice device_L;
-
+    private XRNode xrNode_R = XRNode.RightHand;
+    private InputDevice device_R;
 
     void GetDevice()
     {
