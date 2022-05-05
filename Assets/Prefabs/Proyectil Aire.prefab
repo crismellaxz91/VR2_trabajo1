@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6047682469909563444}
   - component: {fileID: 1612955492677415282}
   m_Layer: 9
-  m_Name: Proyectil aire
+  m_Name: Proyectil Aire
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6047682471405782071}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.071}
   m_LocalScale: {x: 0.048563335, y: 0.04856333, z: 0.04856333}
   m_Children: []
   m_Father: {fileID: 6047682469909563445}
@@ -315,7 +315,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.0754717, g: 0.06941973, b: 0.06941973, a: 1}
+      maxColor: {r: 0.254717, g: 0.24150054, b: 0.24150054, a: 0.46666667}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1394,7 +1394,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.34906584
+      scalar: 0.6981317
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -4909,7 +4909,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6aee3ddf8101b8441a7555476dfb3869, type: 2}
+  - {fileID: 2100000, guid: d7d2e18ffbe379845ad904230aef1f57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
