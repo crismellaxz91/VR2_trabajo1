@@ -69,7 +69,7 @@ public class EnemyStatus : MonoBehaviour
         while (freezingTickTimers.Count > 0)
         {
             icyParticles.SetActive(true);
-            MeshRenderer mesh = gameObject.GetComponent<MeshRenderer>();
+            //MeshRenderer mesh = gameObject.GetComponent<MeshRenderer>();
             for (int i = 0; i < freezingTickTimers.Count; i++)
             {
                 freezingTickTimers[i]--;
