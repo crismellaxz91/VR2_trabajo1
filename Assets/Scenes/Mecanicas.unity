@@ -1190,10 +1190,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuegoOBJ
       objectReference: {fileID: 0}
-    - target: {fileID: 4566728624858299140, guid: b0229c73806e06743832be845769361c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4566728624858299142, guid: b0229c73806e06743832be845769361c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1237,6 +1233,10 @@ PrefabInstance:
     - target: {fileID: 4566728624858299142, guid: b0229c73806e06743832be845769361c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566728624995825146, guid: b0229c73806e06743832be845769361c, type: 3}
+      propertyPath: LightsModule.light
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0229c73806e06743832be845769361c, type: 3}
