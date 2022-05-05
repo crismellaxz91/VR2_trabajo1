@@ -26,10 +26,7 @@ public class ModularRayPower : MonoBehaviour
     [Header("Transforms")]
     public Transform pivotOrigin;
 
-    //public Transform objectHold;
-    //objectHold.position = pivotOrigin.position + ray.direction * distance;
-
-    public bool leftHandDebugPC; //debug
+    public bool leftHandDebugPC; 
 
     #region nodesAndInput
     [SerializeField]

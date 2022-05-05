@@ -58,7 +58,7 @@ MonoBehaviour:
   objectInstance: {fileID: 0}
   launchVelocity: 30
   pivotOrigin: {fileID: 403466169539470448}
-  leftHandDebugPC: 1
+  leftHandDebugPC: 0
   xrNode_L: 4
 --- !u!114 &1150973266
 MonoBehaviour:
@@ -81,6 +81,8 @@ MonoBehaviour:
   distance: 5
   roca: {fileID: 128935683, guid: 8d931b3fb82717949a490ba2479926c4, type: 3}
   agua: {fileID: 5044166598407498686, guid: e20bae8fc35b8b9438235753cdab5387, type: 3}
+  fuego: {fileID: 3216694570263898469, guid: 78221e994d9e66040bf0f775e04b26ba, type: 3}
+  aire: {fileID: 6047682469909563467, guid: 89f4cb9943e9eee4dadafdc2e825d2d9, type: 3}
   objectInstance: {fileID: 0}
   launchVelocity: 30
   pivotOrigin: {fileID: 403466167902459107}
@@ -1502,8 +1504,8 @@ GameObject:
   - component: {fileID: 4560103923237579025}
   - component: {fileID: 6437076020500290586}
   - component: {fileID: 1921195928126437383}
-  - component: {fileID: 403466169666542933}
   - component: {fileID: 978322475}
+  - component: {fileID: 403466169666542933}
   m_Layer: 10
   m_Name: XR Origin
   m_TagString: Player
@@ -1561,20 +1563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!136 &403466169666542933
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9027929357194777022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2.1634624
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.07140243, z: 0}
 --- !u!114 &978322475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,6 +1576,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+--- !u!136 &403466169666542933
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027929357194777022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.1634624
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.07140243, z: 0}
 --- !u!1001 &403466167775238927
 PrefabInstance:
   m_ObjectHideFlags: 0

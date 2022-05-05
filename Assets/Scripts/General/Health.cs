@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public int health;
-    
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -20,7 +19,7 @@ public class Health : MonoBehaviour
         }
         if(health <= 0 && gameObject.tag == "Player")
         {
-
+            Debug.Log("you¿re dead");
         }
     }
 }

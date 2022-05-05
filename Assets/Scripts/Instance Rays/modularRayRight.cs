@@ -18,16 +18,15 @@ public class modularRayRight : MonoBehaviour
 
     public GameObject roca;
     public GameObject agua;
+    public GameObject fuego;
+    public GameObject aire;
     public GameObject objectInstance;
     public float launchVelocity;
 
     [Header("Transforms")]
     public Transform pivotOrigin;
 
-    //public Transform objectHold;
-    //objectHold.position = pivotOrigin.position + ray.direction * distance;
-
-    public bool rightHandDebugPC; //debug
+    public bool rightHandDebugPC; 
 
     #region nodesAndInput
     [SerializeField]
@@ -84,11 +83,21 @@ public class modularRayRight : MonoBehaviour
                 InstanceRock();
 
             }
-            else if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && rightHandDebugPC && !objectInstance)
+            if (hit.collider.CompareTag("Agua") && triggerBool && !objectInstance || hit.collider.CompareTag("Agua") && rightHandDebugPC && !objectInstance)
             {
                 InstaceWater();
 
             }
+            if (hit.collider.CompareTag("Fuego") && triggerBool && !objectInstance || hit.collider.CompareTag("Fuego") && rightHandDebugPC && !objectInstance)
+            {
+                InstaceFire();
+
+            }
+            if (hit.collider.CompareTag("Viento") && triggerBool && !objectInstance || hit.collider.CompareTag("Viento") && rightHandDebugPC && !objectInstance)
+            {
+                InstanceAir();
+            }
+
         }
         hitPoint = hit.point;
         #endregion
@@ -119,6 +128,14 @@ public class modularRayRight : MonoBehaviour
     public void InstaceWater()
     {
         objectInstance = Instantiate(agua, hit.point, Quaternion.identity);
+    }
+    public void InstaceFire()
+    {
+        objectInstance = Instantiate(fuego, hit.point, Quaternion.identity);
+    }
+    public void InstanceAir()
+    {
+        objectInstance = Instantiate(aire, hit.point, Quaternion.identity);
     }
     public void Launching()
     {
