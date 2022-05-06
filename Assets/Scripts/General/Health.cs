@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
         }
         if(health <= 0 && gameObject.tag == "Player")
         {
-            Debug.Log("you¿re dead");
+            Debug.Log("you're dead");
         }
     }
 }
