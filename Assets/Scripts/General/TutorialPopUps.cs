@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR;
 
 public class TutorialPopUps : MonoBehaviour
 {
     #region variables
     public GameObject[] popUps;
+    [SerializeField]
     private int popUpIndex;
     public float waitTime;
     #endregion
@@ -22,6 +24,7 @@ public class TutorialPopUps : MonoBehaviour
     void GetDeviceL()
     {
         device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
+
     }
     void GetDeviceR()
     {
@@ -49,6 +52,7 @@ public class TutorialPopUps : MonoBehaviour
     #endregion
     void Update()
     {
+        OnEnable();
         for (int i = 0; i < popUps.Length; i++)
         {
             if (i == popUpIndex)
@@ -60,20 +64,30 @@ public class TutorialPopUps : MonoBehaviour
                 popUps[popUpIndex].SetActive(false);
             }
         }
+        #region TutorialMovimiento
+        Vector2 primaryAxisValue = Vector2.zero;
+
+        InputFeatureUsage<Vector2> primary2Daxis = CommonUsages.primary2DAxis;
+
         if (popUpIndex == 0)
         {
-            if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out moveBool) && moveBool /*||*/ )
+            if (device_L.TryGetFeatureValue(primary2Daxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero)
             {
+                Debug.Log("moving");
                 popUpIndex++;
             }
         }
+        #endregion
+        #region TutorialInvocarElementos
         else if (popUpIndex == 1)
         {
-            if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
+            if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool || device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
             {
                 popUpIndex++;
             }
         }
+        #endregion
+        #region TutorialAgarre
         else if (popUpIndex == 2)
         {
             if (device_L.TryGetFeatureValue(CommonUsages.gripButton, out triggerBool) && triggerBool)
@@ -81,5 +95,6 @@ public class TutorialPopUps : MonoBehaviour
                 popUpIndex++;
             }
         }
+        #endregion
     }
 }
