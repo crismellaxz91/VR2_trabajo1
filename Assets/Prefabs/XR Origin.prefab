@@ -59,7 +59,6 @@ MonoBehaviour:
   launchVelocity: 30
   pivotOrigin: {fileID: 403466169539470448}
   leftHandDebugPC: 0
-  xrNode_L: 4
 --- !u!114 &1150973266
 MonoBehaviour:
   m_ObjectHideFlags: 0

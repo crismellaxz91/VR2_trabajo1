@@ -120,6 +120,7 @@ public class modularRayRight : MonoBehaviour
 
         }
     }
+    #region InstanceObjects
     public void InstanceRock()
     {
         objectInstance = Instantiate(roca, hit.point, Quaternion.identity);
@@ -137,6 +138,7 @@ public class modularRayRight : MonoBehaviour
     {
         objectInstance = Instantiate(aire, hit.point, Quaternion.identity);
     }
+    #endregion
     public void Launching()
     {
         if (objectInstance != null && dragging)

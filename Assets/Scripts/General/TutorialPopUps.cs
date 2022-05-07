@@ -10,6 +10,8 @@ public class TutorialPopUps : MonoBehaviour
     public GameObject[] popUps;
     [SerializeField]
     private int popUpIndex;
+    [SerializeField]
+    private Vector2 primaryAxisValue;
     public float waitTime;
     #endregion
     #region NodesAndInput
@@ -17,10 +19,14 @@ public class TutorialPopUps : MonoBehaviour
     private InputDevice device_L;
     private XRNode xrNode_R = XRNode.RightHand;
     private InputDevice device_R;
-    public bool moveBool;
+
+    #region debug
     public bool triggerBool;
-    public bool leftHandDebugPC;
-    public bool rightHandDebugPC;
+    public bool triggerLDebugPC;
+    public bool triggerRDebugPC;
+    public bool gripDebugPC;
+    #endregion
+
     void GetDeviceL()
     {
         device_L = InputDevices.GetDeviceAtXRNode(xrNode_L);
@@ -40,11 +46,11 @@ public class TutorialPopUps : MonoBehaviour
         {
             GetDeviceR();
         }
-        else if (leftHandDebugPC)
+        else if (triggerLDebugPC)
         {
             GetDeviceL();
         }
-        else if (rightHandDebugPC)
+        else if (triggerRDebugPC)
         {
             GetDeviceR();
         }
@@ -61,40 +67,33 @@ public class TutorialPopUps : MonoBehaviour
             }
             else
             {
-                popUps[popUpIndex].SetActive(false);
+                popUps[i].SetActive(false);
             }
         }
-        #region TutorialMovimiento
-        Vector2 primaryAxisValue = Vector2.zero;
-
-        InputFeatureUsage<Vector2> primary2Daxis = CommonUsages.primary2DAxis;
+         //Tutorial movimiento de personaje y camara
 
         if (popUpIndex == 0)
         {
-            if (device_L.TryGetFeatureValue(primary2Daxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero)
+            if (device_L.TryGetFeatureValue(CommonUsages.primary2DAxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero)
             {
-                Debug.Log("moving");
                 popUpIndex++;
             }
         }
-        #endregion
-        #region TutorialInvocarElementos
+         //Tutorial invocarElementos
         else if (popUpIndex == 1)
         {
-            if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool || device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool)
+            if (device_L.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool || device_R.TryGetFeatureValue(CommonUsages.triggerButton, out triggerBool) && triggerBool || triggerRDebugPC || triggerLDebugPC)
             {
                 popUpIndex++;
             }
-        }
-        #endregion
-        #region TutorialAgarre
+        } 
+        //Tutorial agarre
         else if (popUpIndex == 2)
         {
-            if (device_L.TryGetFeatureValue(CommonUsages.gripButton, out triggerBool) && triggerBool)
+            if (device_L.TryGetFeatureValue(CommonUsages.gripButton, out triggerBool) && triggerBool || gripDebugPC)
             {
                 popUpIndex++;
             }
         }
-        #endregion
     }
 }

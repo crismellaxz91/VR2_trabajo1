@@ -31,8 +31,6 @@ public class ModularRayPower : MonoBehaviour
     #region nodesAndInput
     private XRNode xrNode_L = XRNode.LeftHand;
     private InputDevice device_L;
-    private XRNode xrNode_R = XRNode.RightHand;
-    private InputDevice device_R;
 
     void GetDevice()
     {
@@ -120,6 +118,7 @@ public class ModularRayPower : MonoBehaviour
             
         }
     }
+    #region InstanceObjects
     public void InstanceRock()
     {
         objectInstance = Instantiate(roca, hit.point, Quaternion.identity);
@@ -137,6 +136,7 @@ public class ModularRayPower : MonoBehaviour
     {
         objectInstance = Instantiate(aire, hit.point, Quaternion.identity);
     }
+    #endregion
     public void Launching()
     {
         if(objectInstance != null && dragging)
