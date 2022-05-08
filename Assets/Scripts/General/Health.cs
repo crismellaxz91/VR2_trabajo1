@@ -13,13 +13,13 @@ public class Health : MonoBehaviour
     void Update()
     {
         
-        if(health <= 0)
+        if(health <= 0 && gameObject.tag != "Player" )
         {
             Destroy(gameObject);
         }
         if(health <= 0 && gameObject.tag == "Player")
         {
-            Debug.Log("you're dead");
+            gameObject.SetActive(false);
         }
     }
 }
