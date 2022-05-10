@@ -9,13 +9,14 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     NavMeshAgent agent;
     Vector3 destination;
-    //public float howCloseInMeters;
-    //public float dist;
+    public Animator animator;
+    
     public void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         destination = agent.destination;
+        animator = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
