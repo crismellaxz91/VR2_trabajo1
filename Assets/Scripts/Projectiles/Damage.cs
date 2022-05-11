@@ -16,7 +16,6 @@ public class Damage : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(damage);
-                Debug.Log("hit");
                 if(gameObject.tag == "PushBullet")
                 {
                     hp--;
