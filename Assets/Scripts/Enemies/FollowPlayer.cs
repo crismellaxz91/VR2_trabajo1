@@ -9,27 +9,28 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     NavMeshAgent agent;
     Vector3 destination;
-    public Animator animator;
+    [SerializeField]
+    private Animator animator;
     
     public void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         destination = agent.destination;
-        animator = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
         var distance = Vector3.Distance(target.position, transform.position);
         if(distance <= 30)
         {
+            animator.SetBool("IsWalking", true);
             agent.enabled = true;
             agent.SetDestination(target.position);
         }
         else
         {
-            this.agent.enabled = false;
-
+            agent.enabled = false;
+            animator.SetBool("IsWalking", false);
         }
     }
 }

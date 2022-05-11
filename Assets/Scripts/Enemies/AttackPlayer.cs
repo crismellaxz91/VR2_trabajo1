@@ -8,31 +8,36 @@ public class AttackPlayer : MonoBehaviour
     public float tiempoProximoDisparo = 0.5f;
     public float fireRate = 0.2f;
     public Rigidbody prefab;
-    public Transform eye;
-    public FollowPlayer follow;
-    public Transform target;
+    private Transform eye;
+    private FollowPlayer follow;
+    private Transform target;
     public Animator animator;
     [SerializeField]
     private Vector3 direccionAlPlayer;
     private float bulletSpeed; 
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        follow = GetComponent<FollowPlayer>();
     }
     void Update()
     {
-        Vector3 direccionAlPlayer = target.transform.position - transform.position;
-
+        direccionAlPlayer = target.transform.position - transform.position;
         if (Vector3.Distance(transform.position, target.transform.position) < attackRange && Time.time >= tiempoProximoDisparo)
         {
+            follow.enabled = false;
+            animator.SetBool("IsAttacking", true);
             tiempoProximoDisparo = Time.time + fireRate;
-            var projectile = Instantiate(prefab, eye.position, prefab.transform.rotation);
-            projectile.AddForce(direccionAlPlayer * bulletSpeed);
         }
     }
-    public void Attack()
+    public void Attack() // se llama con un evento de la animacion de ataque
     {
-
+        var projectile = Instantiate(prefab, eye.position, prefab.transform.rotation);
+        projectile.AddForce(direccionAlPlayer * bulletSpeed);
+        
+    }
+    public void EndAttakc() // se llama con un evento de la animacion de ataque
+    {
+        animator.SetBool("IsAttacking", false);
     }
 }

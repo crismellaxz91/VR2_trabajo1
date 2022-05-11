@@ -6,11 +6,10 @@ public class Damage : MonoBehaviour
 {
     public int damage;
     public string tagTarget;
-    [SerializeField]
     private Health health;
     public int hp;
 
-    public void Start()
+    public void Start() 
     {
         
     }
