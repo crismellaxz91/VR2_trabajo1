@@ -20,7 +20,6 @@ public class Damage : MonoBehaviour
             health = collision.gameObject.GetComponent<Health>();
             if (health != null)
             {
-
                 health.TakeDamage(damage);
                 Debug.Log("hit");
                 if(gameObject.tag == "PushBullet")
@@ -50,7 +49,7 @@ public class Damage : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void DestroyWind() //Destroy the Wind AoE that pushes the enemies
+    public void DestroyWind() //Destruye el gameobject WindFieldPush al final de su animación
     {
         Destroy(gameObject);
     }

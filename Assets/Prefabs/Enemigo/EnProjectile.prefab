@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3237047287985714364}
   - component: {fileID: 3237047287985714354}
   - component: {fileID: 3237047287985714355}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 3237047288071560384}
   - component: {fileID: 3237047288071560411}
   - component: {fileID: 3237047288071560388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnProjectile
   m_TagString: Bullet
   m_Icon: {fileID: 0}
