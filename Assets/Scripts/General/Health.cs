@@ -9,17 +9,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-    }    
+    }
     void Update()
     {
-        
         if(health <= 0 && gameObject.tag != "Player" )
         {
             Destroy(gameObject);
-        }
-        if(health <= 0 && gameObject.tag == "Player")
-        {
-            
         }
     }
 }

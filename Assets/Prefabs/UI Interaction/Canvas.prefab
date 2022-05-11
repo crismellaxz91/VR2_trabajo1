@@ -282,13 +282,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696084614688745776}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f71bce3df7d2d7e418d819c44ab8c256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathUI: {fileID: 5696084614069952996}
-  deathPlayer: {fileID: 0}
   player: {fileID: 0}
   bar: {fileID: 5696084615940983433}
   popUps: {fileID: 5696084614526840492}
@@ -1211,7 +1210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696084615940983433}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 157ad41dc3819434d8626fbcb273cbfc, type: 3}
   m_Name: 
@@ -1342,8 +1341,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5696084614688745777}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 3
+        m_MethodName: RestartScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1658,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7598062934750387030, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7598062934750387034, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}
       propertyPath: m_Pivot.x
@@ -1749,6 +1748,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7598062935464268067, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598062935464268067, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
@@ -1758,7 +1761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7598062935464268095, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06b60eedfbea3404480bbc9f520706b9, type: 3}

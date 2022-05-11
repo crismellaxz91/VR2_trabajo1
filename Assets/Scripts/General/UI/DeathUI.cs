@@ -20,6 +20,7 @@ public class DeathUI : MonoBehaviour
     }
     void Update()
     {
+        #region Chequear Si El Player Sigue Vivo
         Health playerHp = player.gameObject.GetComponent<Health>();
         if(playerHp.health <= 0)
         {
@@ -27,10 +28,8 @@ public class DeathUI : MonoBehaviour
             popUps.SetActive(false);
             bar.SetActive(false);
         }
-        if(playerHp.health >= 0)
-        {
-            CanvasFollow();
-        }
+        #endregion
+        CanvasFollow();
     }
     public void CanvasFollow() //sigue la posicion de un objeto que lleva el player.
     {
