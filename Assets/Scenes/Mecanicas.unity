@@ -3201,14 +3201,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  animator: {fileID: 4454875637731768881}
-  attackRange: 0
-  tiempoProximoDisparo: 0.5
-  fireRate: 0.2
+  sightRange: 9
+  attackRange: 6
+  timeBetweenAttacks: 1
+  alreadyAttacked: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 1024
   prefab: {fileID: 3237047288071560411, guid: 96bac0da72b0804469cc40c06b36a243, type: 3}
   eye: {fileID: 1623501208}
-  bulletSpeed: 50
+  bulletSpeed: 250
   isAttacking: 0
+  animator: {fileID: 4454875637731768881}
 --- !u!114 &3897099476933655878
 MonoBehaviour:
   m_ObjectHideFlags: 0
