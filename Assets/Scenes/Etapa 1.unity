@@ -2922,10 +2922,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5696084614688745768, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696084614688745768, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: canvasPos
       value: 
       objectReference: {fileID: 1811308211}
@@ -2995,7 +2991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5696084614688745770, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.1
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5696084614688745770, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3013,6 +3009,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5696084614688745771, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: popUps.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696084614688745771, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: popUps.Array.data[4]
+      value: 
+      objectReference: {fileID: 1539004045}
     - target: {fileID: 5696084614688745773, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3021,17 +3025,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5696084614688745776, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5696084615328932872, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696084615940983431, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
-      propertyPath: playerHP
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
@@ -13180,6 +13176,11 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1539004045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1539004045, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+  m_PrefabInstance: {fileID: 332001053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540332804
 PrefabInstance:
   m_ObjectHideFlags: 0

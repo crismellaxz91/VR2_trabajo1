@@ -95,5 +95,13 @@ public class TutorialPopUps : MonoBehaviour
                 popUpIndex++;
             }
         }
+        //Indicacion de lo que debes hacer ahora.
+        else if (popUpIndex == 3)
+        {
+            if (device_L.TryGetFeatureValue(CommonUsages.primary2DAxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero)
+            {
+                popUpIndex++;
+            }
+        }
     }
 }
