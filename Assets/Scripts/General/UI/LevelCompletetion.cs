@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
 public class LevelCompletetion : MonoBehaviour
 {
     public TMP_Text textoNumeroDeEnemigos;
