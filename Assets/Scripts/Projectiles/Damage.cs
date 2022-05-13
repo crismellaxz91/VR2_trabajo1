@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    #region variables
     public int damage;
     public string tagTarget;
     private Health health;
     public int hp;
-    public void OnCollisionEnter(Collision collision)
+    #endregion
+    public void OnCollisionEnter(Collision collision) // hacer daño en collision
     {
         if (collision.gameObject.CompareTag(tagTarget))
         {
@@ -31,20 +33,26 @@ public class Damage : MonoBehaviour
             }
         }
     }
-    public void OnBecameInvisible()
+    #region eliminarProyectilesEscena
+    public void OnBecameInvisible() // limpieza proyectiles en escena
     {
         if (gameObject.tag == "PushBullet")
         {
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 5f);
         }
 
         if (gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 2f);
         }
     }
     public void DestroyWind() //Destruye el gameobject WindFieldPush al final de su animación
     {
         Destroy(gameObject);
     }
+    public void Update()
+    {
+        OnBecameInvisible();
+    }
+    #endregion
 }
