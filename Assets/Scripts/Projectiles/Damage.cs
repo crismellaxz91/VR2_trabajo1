@@ -38,19 +38,19 @@ public class Damage : MonoBehaviour
     {
         if (gameObject.tag == "PushBullet")
         {
-                Destroy(gameObject, 5f);
+                Destroy(gameObject, 12f);
         }
 
         if (gameObject.tag == "Bullet")
         {
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, 5f);
         }
     }
     public void DestroyWind() //Destruye el gameobject WindFieldPush al final de su animación
     {
         Destroy(gameObject);
     }
-    public void Update()
+    public void UpdateUpdate()
     {
         OnBecameInvisible();
     }
