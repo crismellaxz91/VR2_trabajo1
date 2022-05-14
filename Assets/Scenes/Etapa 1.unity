@@ -3488,6 +3488,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5696084614069952996, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5696084614688745768, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: canvasPos
       value: 
@@ -3595,6 +3599,16 @@ PrefabInstance:
     - target: {fileID: 5696084615328932872, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696084615679954044, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: m_text
+      value: El suelo, el agua, la tierra y el aire pueden ser convertidos en armas
+        unicas si presionas el boton trigger al apuntarles. Funciona en ambas manos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696084616048815951, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: m_text
+      value: Con el boton grip puedes tomar las rocas que invocas al interactuar
+        con la tierra para usarlas como armas hasta que se rompan.
       objectReference: {fileID: 0}
     - target: {fileID: 5696084616210375816, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: m_IsActive
@@ -9965,7 +9979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590671860746967897, guid: d9d62da1a3572284d8c6e543b95abaab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 161.7
+      value: 140.4
       objectReference: {fileID: 0}
     - target: {fileID: 3590671860746967897, guid: d9d62da1a3572284d8c6e543b95abaab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9973,7 +9987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590671860746967897, guid: d9d62da1a3572284d8c6e543b95abaab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.5
+      value: -16.6
       objectReference: {fileID: 0}
     - target: {fileID: 3590671860746967897, guid: d9d62da1a3572284d8c6e543b95abaab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25415,7 +25429,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.256
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
