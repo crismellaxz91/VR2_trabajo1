@@ -15,5 +15,4 @@ public class FireEvents : MonoBehaviour
             fireEvent.Invoke();
         }
     }
-    #endregion
 }
