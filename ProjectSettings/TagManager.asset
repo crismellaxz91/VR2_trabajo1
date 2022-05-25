@@ -16,6 +16,8 @@ TagManager:
   - AoE
   - EnBullet
   - child
+  - entrance
+  - exit
   layers:
   - Default
   - TransparentFX
