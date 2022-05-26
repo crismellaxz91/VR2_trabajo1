@@ -2865,6 +2865,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+--- !u!1 &272663249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 371941871, guid: a834519a09246fc4288d98eaff269f65, type: 3}
+  m_PrefabInstance: {fileID: 272663248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &272750414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3492,6 +3497,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5696084614526840492, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696084614688745768, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
+      propertyPath: bar
+      value: 
+      objectReference: {fileID: 272663249}
     - target: {fileID: 5696084614688745768, guid: bf7d0f0d23d4c35438b8fb018bc964ff, type: 3}
       propertyPath: canvasPos
       value: 
