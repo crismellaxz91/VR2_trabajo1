@@ -34,5 +34,6 @@ public class DeathUI : MonoBehaviour
     public void CanvasFollow() //sigue la posicion de un objeto que lleva el player.
     {
         canvas.transform.position = canvasPos.transform.position;
+        canvas.transform.rotation = canvasPos.transform.rotation;
     }
 }
