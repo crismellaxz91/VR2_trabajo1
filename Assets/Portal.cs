@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    //public Transform backPortal;
-    //public Transform entrancePortal;
-    public Transform entrance;
-    public Transform exit;
-    public bool hasEntered;
-    void Start()
-    {
-       
-    }
+    public Transform teleportPosition;
     private void OnTriggerEnter(Collider other)
     {
-      
+      if(other.CompareTag("Player"))
+        {
+
+            other.transform.position = teleportPosition.position;
+        }
     }
 }

@@ -34432,14 +34432,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745087842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49d09876c71cb5349b7cd8e2f738aa41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entrance: {fileID: 2013563219}
-  exit: {fileID: 2013563219}
-  hasEntered: 0
+  teleportPosition: {fileID: 0}
 --- !u!135 &1745087844
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34786,9 +34784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d09876c71cb5349b7cd8e2f738aa41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entrance: {fileID: 2013563219}
-  exit: {fileID: 1745087845}
-  hasEntered: 0
+  teleportPosition: {fileID: 0}
 --- !u!1 &2115703892
 GameObject:
   m_ObjectHideFlags: 0
@@ -39671,13 +39667,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3389700696667915394, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3679502453570906325, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
       propertyPath: m_Name
       value: EspirituCorrompido
-      objectReference: {fileID: 0}
-    - target: {fileID: 3679502453570906325, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4061093820022256239, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
       propertyPath: m_RootOrder
@@ -39721,6 +39717,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061093820022256239, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154509289587941366, guid: df6a76c68af102f4cb4427595a45064b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
