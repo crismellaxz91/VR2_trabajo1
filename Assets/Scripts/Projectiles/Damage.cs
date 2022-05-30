@@ -28,7 +28,7 @@ public class Damage : MonoBehaviour
                 }
                 if (gameObject.tag == "Bullet")
                 {
-                    Destroy(gameObject);
+                    Destroy(gameObject, 0.2f);
                 }
             }
         }
@@ -43,7 +43,7 @@ public class Damage : MonoBehaviour
 
         if (gameObject.tag == "Bullet")
         {
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 3f);
         }
     }
     public void DestroyWind() //Destruye el gameobject WindFieldPush al final de su animación

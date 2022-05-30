@@ -1218,60 +1218,60 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f4248de3f6095664f97000e850cb9264, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5864ab645dcdea541b49e6e2fc42ff1a, type: 3}
---- !u!1001 &8702512715496491857
+--- !u!1001 &8661260206597593957
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5155815686795389368, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
+      propertyPath: m_Name
+      value: ExplosiveEyeEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000000016162
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15004
+      value: 2.645048
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.7226
+      value: 7.86
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390444, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+    - target: {fileID: 5532377062677099266, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8702512714256390445, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
-      propertyPath: m_Name
-      value: ExplosiveEnemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 75d6178f3d4c48d4b923e9344c3d1098, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5058c54c42363734994b4bc6eb27d8ce, type: 3}
