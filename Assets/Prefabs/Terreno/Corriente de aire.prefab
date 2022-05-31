@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8790297344843606035}
   - component: {fileID: 8790297344843606032}
   - component: {fileID: 2993825483770637540}
-  m_Layer: 0
+  - component: {fileID: 1742228925}
+  m_Layer: 1
   m_Name: Corriente de aire
   m_TagString: Viento
   m_Icon: {fileID: 0}
@@ -4819,3 +4820,18 @@ CapsuleCollider:
   m_Height: 1.7387763
   m_Direction: 2
   m_Center: {x: 0, y: -0.011343002, z: 0.27322578}
+--- !u!114 &1742228925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790297344843606033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77241ee8d69eeda4289369ea001a4e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockEvent:
+    m_PersistentCalls:
+      m_Calls: []
