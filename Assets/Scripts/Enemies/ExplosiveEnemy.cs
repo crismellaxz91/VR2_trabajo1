@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ExplosiveEnemy : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ExplosiveEnemy : MonoBehaviour
     }
     void Update()
     {
+        var Agent = gameObject.GetComponent<NavMeshAgent>();
+        speed = Agent.speed;
         playerInAgroRange = Physics.CheckSphere(transform.position, agroRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position /*+ new Vector3(0, 1, 0)*/, attackRange, whatIsPlayer);
         if (playerInAgroRange)

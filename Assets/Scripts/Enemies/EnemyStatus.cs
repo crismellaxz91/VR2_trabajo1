@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyStatus : MonoBehaviour
 {
     private Health healthScript;
-    private NavMeshAgent agent; 
+    private NavMeshAgent agent;
     #region VariablesQuemadura
     public List<int> burningTickTimers = new List<int>();
     public int dot = 1;
@@ -20,7 +20,7 @@ public class EnemyStatus : MonoBehaviour
     public void Start()
     {
         healthScript = GetComponent<Health>();
-        agent = GetComponent<NavMeshAgent>();   
+        agent = GetComponent<NavMeshAgent>();
     }
     #region FuncionesQuemadura
     public void ApplyBurn(int ticks)
