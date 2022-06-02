@@ -12,7 +12,7 @@ public class TutorialPopUps : MonoBehaviour
     private int popUpIndex;
     [SerializeField]
     private Vector2 primaryAxisValue;
-    public float waitTime;
+    public float waitTime = 2f;
     #endregion
     #region NodesAndInput
     private XRNode xrNode_L = XRNode.LeftHand;
@@ -98,9 +98,13 @@ public class TutorialPopUps : MonoBehaviour
         //Indicacion objetivo del nivel.
         else if (popUpIndex == 3)
         {
-            if (device_L.TryGetFeatureValue(CommonUsages.primary2DAxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero)
+            if (device_L.TryGetFeatureValue(CommonUsages.primary2DAxis, out primaryAxisValue) && primaryAxisValue != Vector2.zero && waitTime <=0)
             {
                 popUpIndex++;
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
             }
         }
     }
