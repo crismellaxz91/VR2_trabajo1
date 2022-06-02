@@ -29,11 +29,11 @@ public class DeathUI : MonoBehaviour
             bar.SetActive(false);
         }
         #endregion
-        CanvasFollow();
+        //CanvasFollow();
     }
-    public void CanvasFollow() //sigue la posicion de un objeto que lleva el player.
-    {
-        canvas.transform.position = canvasPos.transform.position;
-        canvas.transform.rotation = canvasPos.transform.rotation;
-    }
+    //public void CanvasFollow() //sigue la posicion de un objeto que lleva el player.
+    //{
+    //    canvas.transform.position = canvasPos.transform.position;
+    //    canvas.transform.rotation = canvasPos.transform.rotation;
+    //}
 }
