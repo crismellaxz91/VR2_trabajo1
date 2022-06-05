@@ -7,10 +7,20 @@ public class TutorialEvents : MonoBehaviour
 {
     public UnityEvent otherTutorials;
     public UnityEvent endOtherTutorials;
+    public GameObject textGO;
+    public GameObject positionText;
+
+    public void Start()
+    {
+        GameObject parent = gameObject;
+        textGO = parent.transform.GetChild(0).gameObject;
+        positionText = GameObject.FindGameObjectWithTag("Position").GetComponent<Transform>().gameObject;
+    }
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
+            MoveTextToPlayer();
             otherTutorials.Invoke();
         }
     }
@@ -18,7 +28,15 @@ public class TutorialEvents : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            endOtherTutorials.Invoke();
+            Invoke("InvokedEvent", 2f);
         }
+    }
+    public void MoveTextToPlayer()
+    {
+        textGO.transform.position = positionText.transform.position;
+    }
+    public void InvokedEvent()
+    {
+        endOtherTutorials.Invoke();
     }
 }
