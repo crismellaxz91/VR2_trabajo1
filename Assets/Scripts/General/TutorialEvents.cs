@@ -20,8 +20,8 @@ public class TutorialEvents : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            MoveTextToPlayer();
             otherTutorials.Invoke();
+            MoveTextToPlayer();
         }
     }
     public void OnTriggerExit(Collider other)
