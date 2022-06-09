@@ -8,6 +8,7 @@ public class KeyEnemy : MonoBehaviour
     public ProgressLVL progress;
     public void Update()
     {
+       //progress = FindObjectOfType<ProgressLVL>();
        hpKeyEnemy = gameObject.GetComponent<Health>();
         if (hpKeyEnemy.health <= 0)
         {
@@ -16,6 +17,6 @@ public class KeyEnemy : MonoBehaviour
     }
     public void OnDeath()
     {
-        
+        progress.specialEnemies.Remove(gameObject);
     }
 }
