@@ -15,9 +15,14 @@ public class FireEvents : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        var fire = collision.gameObject.GetComponent<BurnStatus>();
+        if(fire != null)
         {
             fireEvents.Invoke();
         }
+        //if (collision.gameObject.CompareTag("Bullet"))
+        //{
+        //    fireEvents.Invoke();
+        //}
     }
 }
