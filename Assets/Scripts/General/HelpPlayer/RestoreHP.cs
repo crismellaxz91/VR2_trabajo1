@@ -8,8 +8,7 @@ public class RestoreHP : MonoBehaviour
     private int hpToRestore;
     [SerializeField]
     private Health playerHealth;
-
-    public void Awake()
+    public void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }

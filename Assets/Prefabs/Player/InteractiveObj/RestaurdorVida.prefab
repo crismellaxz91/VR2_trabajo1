@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1181109760}
   - component: {fileID: 1652228174663961882}
   - component: {fileID: 816696459375476216}
+  - component: {fileID: 8284844666344992015}
   m_Layer: 10
   m_Name: RestaurdorVida
   m_TagString: Untagged
@@ -75,6 +76,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef13ba8cab016854fb237ba1e7371a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8284844666344992015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260375089856201947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9238180dd0ace2346b0e6b6f325eb732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpToRestore: 1
+  playerHealth: {fileID: 0}
 --- !u!1 &5203909887380280113
 GameObject:
   m_ObjectHideFlags: 0
