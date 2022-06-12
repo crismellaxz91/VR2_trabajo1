@@ -14,10 +14,10 @@ public class LevelCompletetion : MonoBehaviour
         GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemy");
         enemiesLeft = enemigos.Length;
         textoNumeroDeEnemigos.text = "Quedan" + " " + enemiesLeft.ToString() + "espíritus";
-        if (enemiesLeft <= 0)
-        {
-            textoNumeroDeEnemigos.enabled = false;
-            endMenu.SetActive(true);
-        }
+        //if (enemiesLeft <= 0)
+        //{
+        //    textoNumeroDeEnemigos.enabled = false;
+        //    endMenu.SetActive(true);
+        //}
     }
 }

@@ -29,8 +29,11 @@ public class FollowPlayer : MonoBehaviour
     public void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+    }
+    public void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
     public void Update()
     {

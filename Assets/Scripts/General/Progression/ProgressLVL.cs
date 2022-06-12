@@ -10,6 +10,7 @@ public class ProgressLVL : MonoBehaviour
     public int specialEnemiesLeft;
     public UnityEvent doorEvent; //Entrar a la zona bloqueada para poder desbloquear el domo 1
     public UnityEvent dome1Event;
+    public UnityEvent endingEvent;
     //public List<GameObject> hiddenEnemies;
     #endregion
     void Start()
