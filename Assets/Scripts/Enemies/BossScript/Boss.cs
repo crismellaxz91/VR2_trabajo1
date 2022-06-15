@@ -5,31 +5,40 @@ using UnityEngine.AI;
 
 public class Boss : MonoBehaviour
 {
-    #region VariablesNavegacion
+    [SerializeField]
+    Animator anim;
     public Transform target;
-    [SerializeField]
     NavMeshAgent agent;
-    #endregion
-    #region VariablesAtaque
-    public float sightRange, attackRange;
-    public float timeBetweenAttacks;
-    public bool alreadyAttacked;
-    public bool playerInSightRange, playerInAttackRange;
-    public LayerMask whatIsPlayer;
-    private Vector3 direccionAlPlayer;
     [SerializeField]
-    bool isAttacking;
-    #endregion
-    [SerializeField]
-    private Animator animator;
+    bool enableAct;
+    int atkStep;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        enableAct = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void ChasePlayer()
+    {
+        if((target.position - transform.position).magnitude >= 10)
+        {
+            agent.SetDestination(target.position);
+            anim.SetBool("Walk", true);
+        }
+        if((target.position - transform.position).magnitude < 10)
+        {
+            anim.SetBool("Walk", false);
+        }
+    }
+    public void RotateBoss()
+    {
+      Vector3 dir = target.transform.position - transform.position;
+      transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
     }
 }

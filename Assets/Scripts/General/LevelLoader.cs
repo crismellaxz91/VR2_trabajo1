@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void QuitGame()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
     public void RestartScene()
