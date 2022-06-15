@@ -12,9 +12,8 @@ public class Boss : MonoBehaviour
     [SerializeField]
     bool enableAct;
     int atkStep;
-    public float speedBoss;
-    public float sightRange;
-    public bool playerInSightRange;
+    public float sightRange, attackRange;
+    private bool playerInSightRange, playerInAttackRange;
     public LayerMask whatIsPlayer;
     void Start()
     {
@@ -36,6 +35,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         if (enableAct)
         {
             RotateBoss();
@@ -50,15 +50,15 @@ public class Boss : MonoBehaviour
             {
                 case 0:
                     atkStep += 1;
-                    anim.Play("");
+                    anim.Play("LeftAtk");
                     break;
                 case 1:
                     atkStep += 1;
-                    anim.Play("");
+                    anim.Play("Stomp");
                     break;
                 case 2:
                     atkStep = 0;
-                    anim.Play("");
+                    anim.Play("Smash");
                     break;
             }
         }
