@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DeathUI : MonoBehaviour
 {
@@ -24,16 +23,23 @@ public class DeathUI : MonoBehaviour
         Health playerHp = player.gameObject.GetComponent<Health>();
         if(playerHp.health <= 0)
         {
+            OnDeath();
             deathUI.SetActive(true);
             popUps.SetActive(false);
             bar.SetActive(false);
         }
         #endregion
-        //CanvasFollow();
+        //OnDeath();
     }
-    //public void CanvasFollow() //sigue la posicion de un objeto que lleva el player.
-    //{
-    //    canvas.transform.position = canvasPos.transform.position;
-    //    canvas.transform.rotation = canvasPos.transform.rotation;
-    //}
+    public void OnDeath()
+    {
+        canvas.transform.position = canvasPos.position;
+        canvas.transform.rotation = canvasPos.localRotation;
+        Invoke("StopFollowing", 2f);
+    }
+    public void StopFollowing ()
+    {
+        canvas.transform.position = canvas.transform.localPosition;
+        canvas.transform.rotation = canvas.transform.localRotation;
+    }
 }

@@ -5,8 +5,13 @@ using UnityEngine;
 public class Obelisk : MonoBehaviour
 {
     public ProgressLVL progress;
-    public void OnDestroy()
+    public GameObject obeliskHealth;
+    public void Update()
     {
-        progress.dome1Event.Invoke();
+        Health health = obeliskHealth.GetComponent<Health>();
+        if(health.health <= 0)
+        {
+            progress.dome1Event.Invoke();
+        }
     }
 }
