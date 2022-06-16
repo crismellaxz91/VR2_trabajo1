@@ -24,7 +24,6 @@ public class Boss : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        enableAct = true;
         agent = gameObject.GetComponent<NavMeshAgent>();
     }
     public void ChasePlayer()
@@ -40,11 +39,19 @@ public class Boss : MonoBehaviour
     void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        if(playerInSightRange)
+        {
+            enableAct = true;
+        }
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         if (enableAct)
         {
             RotateBoss();
             ChasePlayer();
+        }
+        if(playerInAttackRange)
+        {
+            anim.SetBool("Walk", false);
         }
     }
     void BossAttack()
