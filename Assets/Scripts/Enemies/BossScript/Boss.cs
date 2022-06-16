@@ -5,16 +5,21 @@ using UnityEngine.AI;
 
 public class Boss : MonoBehaviour
 {
+    #region variables
     [SerializeField]
     Animator anim;
-    public Transform target;
+    public Transform target, explosionInstanceL, explosionInstanceR, stompInstance;
     NavMeshAgent agent;
     [SerializeField]
     bool enableAct;
+    [SerializeField]
     int atkStep;
     public float sightRange, attackRange;
     private bool playerInSightRange, playerInAttackRange;
     public LayerMask whatIsPlayer;
+    public GameObject explosion;
+    #endregion
+    #region BossCode
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -44,7 +49,7 @@ public class Boss : MonoBehaviour
     }
     void BossAttack()
     {
-        if((target.position - transform.position).magnitude < 10)
+        if(playerInAttackRange)
         {
             switch(atkStep)
             {
@@ -54,11 +59,15 @@ public class Boss : MonoBehaviour
                     break;
                 case 1:
                     atkStep += 1;
-                    anim.Play("Stomp");
+                    anim.Play("RightAtk");
                     break;
                 case 2:
-                    atkStep = 0;
+                    atkStep += 1;
                     anim.Play("Smash");
+                    break;
+                case 3:
+                    atkStep = 0;
+                    anim.Play("Stomp");
                     break;
             }
         }
@@ -75,5 +84,22 @@ public class Boss : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    #endregion
+    #region ExplosionsForTheAttack
+    public void ExplosiveAttackL()
+    {
+        Instantiate(explosion, explosionInstanceL.position, explosion.transform.rotation);
+    }
+    public void ExplosiveAttackR()
+    {
+        Instantiate(explosion, explosionInstanceR.position, explosion.transform.rotation);
+    }
+    public void StompExplosiveAttack()
+    {
+        Instantiate(explosion, stompInstance.position, gameObject.transform.rotation);
+    }
+    #endregion
 }

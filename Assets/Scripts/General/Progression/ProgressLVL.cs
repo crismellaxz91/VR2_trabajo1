@@ -27,4 +27,3 @@ public class ProgressLVL : MonoBehaviour
         }
     }
 }
-//Añadir script a enemigos ocultos, hacer un array de objetos que tengan este script e indicarle que los GO que tienen ese script son los enemigos especiales

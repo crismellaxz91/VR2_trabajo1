@@ -10,6 +10,10 @@ public class Damage : MonoBehaviour
     private Health health;
     public int hp;
     #endregion
+    public void Start()
+    {
+        
+    }
     public void OnCollisionEnter(Collision collision) // hacer daño en collision
     {
         if (collision.gameObject.CompareTag(tagTarget))

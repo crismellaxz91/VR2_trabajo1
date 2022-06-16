@@ -7,6 +7,7 @@ public class BossCanvas : MonoBehaviour
 {
     public GameObject winUI;
     public Slider bar;
+    public GameObject bossName;
     public Health bossHP;
     void Start()
     {
@@ -23,6 +24,7 @@ public class BossCanvas : MonoBehaviour
     {
         if(bossHP.health <= 0)
         {
+            bossName.SetActive(false);
             bar.gameObject.SetActive(false);
             winUI.SetActive(true);
         }
