@@ -34,7 +34,7 @@ public class DeathUI : MonoBehaviour
     public void OnDeath()
     {
         canvas.transform.position = canvasPos.position;
-        canvas.transform.rotation = canvasPos.localRotation;
+        canvas.transform.rotation = canvasPos.rotation;
         Invoke("StopFollowing", 2f);
     }
     public void StopFollowing ()

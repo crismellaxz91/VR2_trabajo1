@@ -51,7 +51,7 @@ public class Boss : MonoBehaviour
     {
         if(playerInAttackRange)
         {
-            switch(atkStep)
+            switch (atkStep)
             {
                 case 0:
                     atkStep += 1;
