@@ -852,8 +852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  sightRange: 10
-  attackRange: 4
+  sightRange: 15
+  attackRange: 5
   timeBetweenAttacks: 2.3
   alreadyAttacked: 0
   playerInSightRange: 0
