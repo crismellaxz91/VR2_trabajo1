@@ -12,7 +12,7 @@ Material:
   m_ShaderKeywords: _LIGHTING_ON _SECONDARYFOAMALWAYSVISIBLE_ON _SECONDARY_WAVES_ON
     _USEINTERSECTIONFOAM_ON _WORLDSPACETILING_ON
   m_LightmapFlags: 0
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap: {}
