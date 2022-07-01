@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3383003492094144956}
   - component: {fileID: 1980146518440027156}
   - component: {fileID: 1271430079}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EM_Tree1a_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3692538873429294211
 Transform:
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405999067366571850}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 1.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1874385644457549662}
@@ -56,11 +56,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97822256caa3254fb7b880303af5694, type: 2}
-  - {fileID: -7647217845052693645, guid: 3338671b078f6184d9530ee83999bab0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1271430079
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -105,12 +106,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1874385644457549662}
   - component: {fileID: 6654412018205157423}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EM_Tree1a_PRE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1874385644457549662
 Transform:
@@ -167,12 +168,12 @@ GameObject:
   - component: {fileID: 5644360047849312070}
   - component: {fileID: 8080180092534405797}
   - component: {fileID: 2591549617341304170}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EM_Tree1a_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5644360047849312070
 Transform:
@@ -211,6 +212,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -236,6 +238,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4464579893302187724
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,12 +250,12 @@ GameObject:
   - component: {fileID: 7432944286181580680}
   - component: {fileID: 5822114791201860159}
   - component: {fileID: 5693230728799233013}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EM_Tree1a_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7432944286181580680
 Transform:
@@ -291,6 +294,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -316,3 +320,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
