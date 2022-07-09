@@ -13,7 +13,7 @@ public class ModularRayPower : MonoBehaviour
 
     private Ray ray;
     private RaycastHit hit;
-    public LayerMask dragMask;
+    public LayerMask dragMask, ignoreMask;
     public float distance;
 
     public GameObject roca;
@@ -74,7 +74,7 @@ public class ModularRayPower : MonoBehaviour
 
         ray = new Ray(pivotOrigin.transform.position, pivotOrigin.forward);
 
-        if (Physics.Raycast(ray, out hit, distance))
+        if (Physics.Raycast(ray, out hit, distance, ignoreMask))
         {
             if (hit.collider.CompareTag("Tierra") && triggerBool  && !objectInstance || hit.collider.CompareTag("Tierra") && leftHandDebugPC && !objectInstance)
             {
