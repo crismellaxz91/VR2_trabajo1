@@ -9,6 +9,11 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        if (gameObject.CompareTag("Player"))
+        {
+            AudioSource source = gameObject.GetComponent<AudioSource>();
+            source.Play();
+        }
     }
     void Update()
     {
