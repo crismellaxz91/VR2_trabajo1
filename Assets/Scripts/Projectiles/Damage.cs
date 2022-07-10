@@ -46,7 +46,7 @@ public class Damage : MonoBehaviour
     {
         if (gameObject.tag == "PushBullet")
         {
-                Destroy(gameObject, 12f);
+                Destroy(gameObject, 20f);
         }
 
         if (gameObject.tag == "Bullet")
