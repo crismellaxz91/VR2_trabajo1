@@ -14,6 +14,10 @@ public class Damage : MonoBehaviour
     {
         
     }
+    public void Update()
+    {
+        OnBecameInvisible();
+    }
     public void OnCollisionEnter(Collision collision) // hacer daño en collision
     {
         if (collision.gameObject.CompareTag(tagTarget))
@@ -32,7 +36,7 @@ public class Damage : MonoBehaviour
                 }
                 if (gameObject.tag == "Bullet")
                 {
-                    Destroy(gameObject, 0.2f);
+                    Destroy(gameObject);
                 }
             }
         }
@@ -47,16 +51,12 @@ public class Damage : MonoBehaviour
 
         if (gameObject.tag == "Bullet")
         {
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, 12f);
         }
     }
     public void DestroyWind() //Destruye el gameobject WindFieldPush al final de su animación
     {
         Destroy(gameObject);
-    }
-    public void UpdateUpdate()
-    {
-        OnBecameInvisible();
     }
     #endregion
 }
