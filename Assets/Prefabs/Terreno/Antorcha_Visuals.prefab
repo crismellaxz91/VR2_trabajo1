@@ -89,6 +89,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 700717497099141363}
     m_Modifications:
+    - target: {fileID: -5317151432928631354, guid: b0229c73806e06743832be845769361c, type: 3}
+      propertyPath: MaxDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5317151432928631354, guid: b0229c73806e06743832be845769361c, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4566728624754415696, guid: b0229c73806e06743832be845769361c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
