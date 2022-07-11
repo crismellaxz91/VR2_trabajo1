@@ -70,7 +70,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Golem_Walking
-  m_Speed: 1
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8122925797866363866}
@@ -149,7 +149,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stomp
-  m_Speed: 1
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3987671904442086778}
@@ -176,7 +176,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RightAtk
-  m_Speed: 1
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8835997032752419587}
@@ -231,7 +231,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -275,7 +275,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Smash
-  m_Speed: 1
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1010990726005150053}
@@ -302,7 +302,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LeftAtk
-  m_Speed: 1
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 171961725260641177}
